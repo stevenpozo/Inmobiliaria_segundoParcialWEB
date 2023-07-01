@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+	background-image: url("../img/background_ciudades.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+/*Cotenido principal*/
+
+#container {
+    display: flex;
+    flex-direction: row;
+}
+/*Menú lateral*/
+#sidebar {
+    width: 200px;
+    padding: 20px;
+}
+#sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#sidebar li {
+    background-color: rgba(240,240,240,0.0);
+    margin: 2px;
+    padding: 2px;
+    font-weight: bold;
+    font-size: 12px;
+}
+#sidebar a {
+    color: black;
+    text-decoration: none;
+}
+/*Seccion de información de las casas*/
+.house-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+	padding: 10px 30px;
+	background-color: rgba(242,188,148,0.7);
+	border-radius: 50px;
+	margin-bottom: 10px;
+}
+	.cont_info{
+		padding: 10px;
+		width: 100%;
+	}
+
+.house-image {
+    width: 300px;
+    height: 350px;
+    margin-right: 20px;
+	border-radius: 20px;
+}
+.house-details {
+    flex-grow: 1;
+}
+table td {
+    padding: 10px 10px 0px 30px;
+border="0"
+}
+tr {
+    width: 100px;
+}
+.t_tabla {
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #722620;
+}
+.tipos_caracteristicas {
+    border: 2px solid #30110B;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.cosas_casa, .ubicacion, .precios, .contactos_compra{
+    padding-left: 30px;
+}
+.text_espacios, .text_ubicacion, .text_precios {
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+    color: #722620;
+}
+
+	.img_contactosCompra{
+		float: right;
+		margin-right: 30px;
+		width: 40px;
+		height: 40px;
+	}
+
+@media (max-width: 600px) {
+.house-info {
+    flex-direction: column;
+}
+.house-image {
+    max-width: auto;
+    max-height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#container {
+    flex-direction: column;
+}
+#sidebar {
+    padding: 10px 180px;
+    width: auto;
+}
