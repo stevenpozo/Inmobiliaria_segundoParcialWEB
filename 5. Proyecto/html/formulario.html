@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link href="../css/formulario..css" rel="stylesheet" type="text/css">
+	<script src="../js/prueba.js"></script>
+</head>
+
+<body>
+<div id="contenedor">
+	  	<form ACTION="https://formsubmit.co/ricardoimbaquinga@gmail.com" id="form2" name="form2" METHOD="post">
+
+    <table class="tabla" BORDER>
+
+
+
+<tr>
+	<td>Teléfono: </td>
+         <td><input class="justify" type="text"  placeholder="0999999999" oninput="clearPlaceholder(this)" name="Telefono" pattern="[0-9]{10}" size="25" required></td>
+</tr>
+
+<tr>
+   <td>Nombre del Remitente:</td>
+   <td> <input class="justify" type="text"  placeholder="Jose Imbaquinga" oninput="clearPlaceholder(this)" size="25"  name="Nombre_Cliente" pattern="[a-zA-Z ]{2,254}" title="Ingrese solo Letras" required> </td> 
+		</tr>
+<tr>
+   <td> Correo:</td>
+   <td><input  class="justify" type="email"  placeholder="ejemplo@gmail.com" oninput="clearPlaceholder(this)" name="Correo_Cliente "size="25" required></td>
+</tr>
+	<tr>
+   <td>Escriba su<br>mensaje:</td>
+   <td> <textarea class="justify" name="Mensaje"  rows="2" cols="48"></textarea></td>
+</tr>
+
+<tr>
+   <td><b>Gracias por su confianza:</b></td>
+   <td>  <input class="justify" type="submit" VALUE="Enviar datos ">
+       <input class="justify" type="reset" VALUE="Borrar los datos"></td>
+</tr>
+</table>
+	</form>
+	</div>
+</body>
+</html>
