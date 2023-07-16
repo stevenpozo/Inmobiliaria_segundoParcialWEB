@@ -4,8 +4,11 @@
 <head>
   <meta charset="utf-8">
   <title>Casas</title>
-  <link href="../css/estilo_casas.css" type="text/css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -15,6 +18,26 @@
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
     crossorigin="anonymous"></script>
   <link href="../css/estilo.css" type="text/css" rel="stylesheet">
+  <link href="../css/estilo_casas.css" type="text/css" rel="stylesheet">
+
+  <style>
+    .house-details {
+      font-size: 15px;
+    }
+
+    input[type="button"] {
+      font-size: 15px;
+    }
+
+    h3 {
+      font-weight: bold;
+    }
+
+    .close{
+      font-size: 30px;
+      color: rgba(108, 7, 41, 1.00);
+    }
+  </style>
 </head>
 
 <body>
@@ -113,13 +136,563 @@
       </div>
     </div>
 
+    <!-- CARRUSEL PICHINCHA-->
+    <div class="modal fade" id="myModal3" tabindex="-1" data-backdrop="static" data-keyboard="true"
+      aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel3">Espacios de Edificio Andalucia</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <br>
+              <div id="theCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicadores -->
+                <ol class="carousel-indicators">
+                  <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#theCarousel" data-slide-to="1"></li>
+                  <li data-target="#theCarousel" data-slide-to="2"></li>
+
+                </ol>
+
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active" style=" height: 400px;">
+                    <img
+                      src="../img/img_comprar/Pichincha/casa1_1_Quito.png"
+                      alt="Ilustracion" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Sala</h3>
+                      <p>Edificio Andalucia</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img
+                      src="../img/img_comprar/Pichincha/casa1_2_Quito.png"
+                      alt="fotografia" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3> Jardin</h3>
+                      <p>Edificio Andalucia</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img src="../img/img_comprar/Pichincha/casa1_3_Quito.png"
+                      alt="pintura" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Gimnasio</h3>
+                      <p>Edificio Andalucia</p>
+                    </div>
+                  </div>
+
+                  <a class="left carousel-control" href="#theCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">anterior</span>
+                  </a>
+                  <a class="right carousel-control" href="#theCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">siguiente</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- CARRUSEL GUAYAS-->
+    <div class="modal fade" id="myModal4" tabindex="-1" data-backdrop="static" data-keyboard="true"
+      aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel4">Santiago City - Urbanización Privada Ubicada en Daule - Casas Vis</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <br>
+              <div id="theCarousel2" class="carousel slide" data-ride="carousel">
+                <!-- Indicadores -->
+                <ol class="carousel-indicators">
+                  <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#theCarousel" data-slide-to="1"></li>
+                  <li data-target="#theCarousel" data-slide-to="2"></li>
+                  <li data-target="#theCarousel" data-slide-to="3"></li>
+
+                </ol>
+
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active" style=" height: 400px;">
+                    <img
+                      src="../img/img_comprar/Guayas/casa2_1_Guayas.jpg"
+                      alt="Ilustracion" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Piscina</h3>
+                      <p>Santiago City - Urbanización Privada Ubicada en Daule - Casas Vis</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img
+                      src="../img/img_comprar/Guayas/casa2_2_Guayas.jpg"
+                      alt="fotografia" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3> Jardin trasero</h3>
+                      <p>Santiago City - Urbanización Privada Ubicada en Daule - Casas Vis</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img src="../img/img_comprar/Guayas/casa2_3_Guayas.jpg"
+                      alt="pintura" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Habitaciones</h3>
+                      <p>Santiago City - Urbanización Privada Ubicada en Daule - Casas Vis</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img src="../img/img_comprar/Guayas/casa2_4_Guayas.jpg"
+                      alt="pintura" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Sala</h3>
+                      <p>Santiago City - Urbanización Privada Ubicada en Daule - Casas Vis</p>
+                    </div>
+                  </div>
+
+                  <a class="left carousel-control" href="#theCarousel2" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">anterior</span>
+                  </a>
+                  <a class="right carousel-control" href="#theCarousel2" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">siguiente</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARRUSEL GUAYAS 1-->
+    <div class="modal fade" id="myModal5" tabindex="-1" data-backdrop="static" data-keyboard="true"
+      aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel5">Condominio/Alícuota</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <br>
+              <div id="theCarousel3" class="carousel slide" data-ride="carousel">
+                <!-- Indicadores -->
+                <ol class="carousel-indicators">
+                  <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#theCarousel" data-slide-to="1"></li>
+                  <li data-target="#theCarousel" data-slide-to="2"></li>
+
+                </ol>
+
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active" style=" height: 400px;">
+                    <img
+                      src="../img/img_comprar/Guayas/casa1_1_Guayas.jpg"
+                      alt="Ilustracion" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Sala </h3>
+                      <p>Condominio/Alícuota</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img
+                      src="../img/img_comprar/Guayas/casa1_2_Guayas.jpg"
+                      alt="fotografia" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3> Cocina</h3>
+                      <p>Condominio/Alícuota</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img src="../img/img_comprar/Guayas/casa1_3_Guayas.jpg"
+                      alt="pintura" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Baños</h3>
+                      <p>Condominio/Alícuota</p>
+                    </div>
+                  </div>
+
+                  <a class="left carousel-control" href="#theCarousel3" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">anterior</span>
+                  </a>
+                  <a class="right carousel-control" href="#theCarousel3" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">siguiente</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- CARRUSEL IMBABURA-->
+    <div class="modal fade" id="myModal6" tabindex="-1" data-backdrop="static" data-keyboard="true"
+      aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel6">Condominio/Alícuota</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <br>
+              <div id="theCarousel4" class="carousel slide" data-ride="carousel">
+                <!-- Indicadores -->
+                <ol class="carousel-indicators">
+                  <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#theCarousel" data-slide-to="1"></li>
+                  <li data-target="#theCarousel" data-slide-to="2"></li>
+                  <li data-target="#theCarousel" data-slide-to="3"></li>
+
+                </ol>
+
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active" style=" height: 400px;">
+                    <img
+                      src="../img/img_comprar/Imbabura/casa1_1_Imbabura.png"
+                      alt="Ilustracion" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Sala </h3>
+                      <p>Condominio/Alícuota</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img
+                      src="../img/img_comprar/Imbabura/casa1_2_Imbabura.png"
+                      alt="fotografia" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3> Sala 2</h3>
+                      <p>Condominio/Alícuota</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img src="../img/img_comprar/Imbabura/casa1_3_Imbabura.png"
+                      alt="pintura" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Cocina</h3>
+                      <p>Condominio/Alícuota</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img src="../img/img_comprar/Imbabura/casa1_4_Imbabura.png"
+                      alt="pintura" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Habitación</h3>
+                      <p>Condominio/Alícuota</p>
+                    </div>
+                  </div>
+
+                  <a class="left carousel-control" href="#theCarousel4" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">anterior</span>
+                  </a>
+                  <a class="right carousel-control" href="#theCarousel4" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">siguiente</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- CARRUSEL MANABÍ-->
+    <div class="modal fade" id="myModal7" tabindex="-1" data-backdrop="static" data-keyboard="true"
+      aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel6">Altos del Pacifico Club y Residences - Urbanización Privada en Manta -
+              Casas Vip</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <br>
+              <div id="theCarousel5" class="carousel slide" data-ride="carousel">
+                <!-- Indicadores -->
+                <ol class="carousel-indicators">
+                  <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#theCarousel" data-slide-to="1"></li>
+                  <li data-target="#theCarousel" data-slide-to="2"></li>
+                  <li data-target="#theCarousel" data-slide-to="3"></li>
+
+                </ol>
+
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active" style=" height: 400px;">
+                    <img
+                      src="../img/img_comprar/Manabi/casa1_1_Manabi.png"
+                      alt="Ilustracion" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Sala </h3>
+                      <p>Altos del Pacifico Club y Residences - Urbanización Privada en Manta -
+                        Casas Vip</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img
+                      src="../img/img_comprar/Manabi/casa1_2_Manabi.png"
+                      alt="fotografia" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3> Piscina</h3>
+                      <p>Altos del Pacifico Club y Residences - Urbanización Privada en Manta -
+                        Casas Vip</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img src="../img/img_comprar/Manabi/casa1_3_Manabi.png"
+                      alt="pintura" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Baño convencional</h3>
+                      <p>Altos del Pacifico Club y Residences - Urbanización Privada en Manta -
+                        Casas Vip</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img src="../img/img_comprar/Manabi/casa1_4_Manabi.png"
+                      alt="pintura" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Patio trasero</h3>
+                      <p>Altos del Pacifico Club y Residences - Urbanización Privada en Manta -
+                        Casas Vip</p>
+                    </div>
+                  </div>
+
+                  <a class="left carousel-control" href="#theCarousel5" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">anterior</span>
+                  </a>
+                  <a class="right carousel-control" href="#theCarousel5" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">siguiente</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+        <!-- CARRUSEL SANTA ELENA-->
+        <div class="modal fade" id="myModal8" tabindex="-1" data-backdrop="static" data-keyboard="true"
+        aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="myModalLabel6">Conjunto Residencial - Salinas Golf y Tenis</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                <br>
+                <div id="theCarousel6" class="carousel slide" data-ride="carousel">
+                  <!-- Indicadores -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#theCarousel" data-slide-to="1"></li>
+                    <li data-target="#theCarousel" data-slide-to="2"></li>
+                    <li data-target="#theCarousel" data-slide-to="3"></li>
+  
+                  </ol>
+  
+                  <div class="carousel-inner" role="listbox">
+                    <div class="item active" style=" height: 400px;">
+                      <img
+                        src="../img/img_comprar/SantaElena/casa1_1_SE.png"
+                        alt="Ilustracion" class="carrusel_img" style="height: 300px;">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h3>Sala </h3>
+                        <p>Conjunto Residencial - Salinas Golf y Tenis</p>
+                      </div>
+                    </div>
+  
+                    <div class="item" style=" height: 400px;">
+                      <img
+                        src="../img/img_comprar/SantaElena/casa1_2_SE.png"
+                        alt="fotografia" class="carrusel_img" style="height: 300px;">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h3> Cocina</h3>
+                        <p>Conjunto Residencial - Salinas Golf y Tenis</p>
+                      </div>
+                    </div>
+  
+                    <div class="item" style=" height: 400px;">
+                      <img src="../img/img_comprar/SantaElena/casa1_3_SE.png"
+                        alt="pintura" class="carrusel_img" style="height: 300px;">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h3>Comedor</h3>
+                        <p>Conjunto Residencial - Salinas Golf y Tenis</p>
+                      </div>
+                    </div>
+  
+                    <div class="item" style=" height: 400px;">
+                      <img src="../img/img_comprar/SantaElena/casa1_4_SE.png"
+                        alt="pintura" class="carrusel_img" style="height: 300px;">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h3>Habitación</h3>
+                        <p>Conjunto Residencial - Salinas Golf y Tenis</p>
+                      </div>
+                    </div>
+  
+                    <a class="left carousel-control" href="#theCarousel6" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">anterior</span>
+                    </a>
+                    <a class="right carousel-control" href="#theCarousel6" role="button" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">siguiente</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- CARRUSEL SANTO DOMINGO-->
+      <div class="modal fade" id="myModal9" tabindex="-1" data-backdrop="static" data-keyboard="true"
+      aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel6">Venta de Dos Casas en Plaza Asturias Sto. Domingo</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <br>
+              <div id="theCarousel7" class="carousel slide" data-ride="carousel">
+                <!-- Indicadores -->
+                <ol class="carousel-indicators">
+                  <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#theCarousel" data-slide-to="1"></li>
+                  <li data-target="#theCarousel" data-slide-to="2"></li>
+                  <li data-target="#theCarousel" data-slide-to="3"></li>
+
+                </ol>
+
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active" style=" height: 400px;">
+                    <img
+                      src="../img/img_comprar/SantoDomingo/casa1_1_AD.png"
+                      alt="Ilustracion" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Segundo piso</h3>
+                      <p>Venta de Dos Casas en Plaza Asturias Sto. Domingo</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img
+                      src="../img/img_comprar/SantoDomingo/casa1_2_AD.png"
+                      alt="fotografia" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3> Dormitorios</h3>
+                      <p>Venta de Dos Casas en Plaza Asturias Sto. Domingo</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img src="../img/img_comprar/SantoDomingo/casa1_3_AD.png"
+                      alt="pintura" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Cocina</h3>
+                      <p>Venta de Dos Casas en Plaza Asturias Sto. Domingo</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img src="../img/img_comprar/SantoDomingo/casa1_4_AD.png"
+                      alt="pintura" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Patio trasero</h3>
+                      <p>Venta de Dos Casas en Plaza Asturias Sto. Domingo</p>
+                    </div>
+                  </div>
+
+                  <a class="left carousel-control" href="#theCarousel7" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">anterior</span>
+                  </a>
+                  <a class="right carousel-control" href="#theCarousel7" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">siguiente</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- CONTENEDOR DE LA CASA COMPLETA-->
 
     <div class="cont_info">
       <!-- PICHINCHA -->
       <div class="house-info">
         <div class="cont_imgCasa"><img class="house-image" src="../img/img_comprar/Pichincha/casa1_Quito.png"
-            alt="Imagen de la casa"></div>
+            alt="Imagen de la casa" class="btn btn-primary" data-toggle="modal" data-target="#myModal3"></div>
         <div class="house-details">
           <h3 class="titulos_casas" id="Pichincha">Edificio Andalucia</h3>
           <div class="precios">
@@ -163,7 +736,7 @@
       <!-- GUAYAS -->
       <div class="house-info">
         <div class="cont_imgCasa"><img class="house-image" src="../img/img_comprar/Guayas/casa2_Guayas.jpg"
-            alt="Imagen de la casa"></div>
+            alt="Imagen de la casa" class="btn btn-primary" data-toggle="modal" data-target="#myModal4"></div>
         <div class="house-details">
           <h3 class="titulos_casas" id="Guayas">Santiago City - Urbanización Privada Ubicada en Daule - Casas Vis</h3>
           <h3 class="titulos_casas"></h3>
@@ -207,7 +780,7 @@
       </div>
       <div class="house-info">
         <div class="cont_imgCasa"><img class="house-image" src="../img/img_comprar/Guayas/casa1_Guayas.jpg"
-            alt="Imagen de la casa"></div>
+            alt="Imagen de la casa" class="btn btn-primary" data-toggle="modal" data-target="#myModal5"></div>
         <div class="house-details">
           <h3 class="titulos_casas">Condominio/Alícuota</h3>
           <div class="precios">
@@ -251,7 +824,7 @@
       <!-- IMBABURA -->
       <div class="house-info">
         <div class="cont_imgCasa"><img class="house-image" src="../img/img_comprar/Imbabura/casa1_imbabura.png"
-            alt="Imagen de la casa"></div>
+            alt="Imagen de la casa" class="btn btn-primary" data-toggle="modal" data-target="#myModal6"></div>
         <div class="house-details">
           <h3 class="titulos_casas" id="Imbabura">Condominio/Alícuota</h3>
           <div class="precios">
@@ -271,12 +844,10 @@
           </div>
           <div class="cosas_casa">
             <p class="text_espacios">Espacios:</p>
-            <div class="tipos_caracteristicas">Jardin delantero</div>
-            <div class="tipos_caracteristicas">Dos pisos</div>
             <div class="tipos_caracteristicas">2 habitaciones</div>
             <div class="tipos_caracteristicas">1 habitación con baño personal</div>
             <div class="tipos_caracteristicas">1 cocina</div>
-            <div class="tipos_caracteristicas">1 Salas</div>
+            <div class="tipos_caracteristicas">2 Salas</div>
             <div class="tipos_caracteristicas">1 baño</div>
           </div>
           <div class="ubicacion">
@@ -295,7 +866,7 @@
       <!-- MANABI -->
       <div class="house-info">
         <div class="cont_imgCasa"><img class="house-image" src="../img/img_comprar/Manabi/casa1_Manabi.png"
-            alt="Imagen de la casa"></div>
+            alt="Imagen de la casa" class="btn btn-primary" data-toggle="modal" data-target="#myModal7"></div>
         <div class="house-details">
           <h3 class="titulos_casas" id="Manabi">Altos del Pacifico Club y Residences - Urbanización Privada en Manta -
             Casas Vip</h3>
@@ -341,7 +912,7 @@
       <!-- SANTA ELENA -->
       <div class="house-info">
         <div class="cont_imgCasa"><img class="house-image" src="../img/img_comprar/SantaElena/casa1_SE.jpg"
-            alt="Imagen de la casa"></div>
+            alt="Imagen de la casa" class="btn btn-primary" data-toggle="modal" data-target="#myModal8"></div>
         <div class="house-details">
           <h3 class="titulos_casas" id="SantaElena">Conjunto Residencial - Salinas Golf y Tenis</h3>
           <div class="precios">
@@ -363,12 +934,11 @@
             <p class="text_espacios">Espacios:</p>
             <div class="tipos_caracteristicas">Jardin trasero</div>
             <div class="tipos_caracteristicas">1 piso</div>
-            <div class="tipos_caracteristicas">5 habitaciones</div>
-            <div class="tipos_caracteristicas">3 habitación con baño personal</div>
+            <div class="tipos_caracteristicas">4 habitaciones</div>
             <div class="tipos_caracteristicas">1 cocina</div>
-            <div class="tipos_caracteristicas">2 Salas</div>
+            <div class="tipos_caracteristicas">1 Sala</div>
             <div class="tipos_caracteristicas">1 baño general</div>
-            <div class="tipos_caracteristicas">Garage</div>
+            <div class="tipos_caracteristicas">Gomedor</div>
           </div>
           <div class="ubicacion">
             <p class="text_ubicacion">Ubicación:</p>
@@ -387,7 +957,7 @@
       <!-- SANTO DOMINGO -->
       <div class="house-info">
         <div class="cont_imgCasa"><img class="house-image" src="../img/img_comprar/SantoDomingo/casa1_AD.png"
-            alt="Imagen de la casa"></div>
+            alt="Imagen de la casa" class="btn btn-primary" data-toggle="modal" data-target="#myModal9"></div>
         <div class="house-details">
           <h3 class="titulos_casas" id="SantoDomingo">Venta de Dos Casas en Plaza Asturias Sto. Domingo</h3>
           <div class="precios">

@@ -9,6 +9,12 @@
   border-radius: 50px;
 }
 
+.modal-header{
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+
 #contenedor, #contenedor2 {
   display: flex;
   justify-content: center;
@@ -61,3 +67,9 @@ input[type="submit"],[type="reset"]{
 label{
   font-weight: bold;
 }
+
+.carousel-inner>.item>img,
+    .carousel-inner>.item>a>img {
+      width: 60%;
+      margin: auto;
+    }
