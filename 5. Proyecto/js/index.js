@@ -17,3 +17,4 @@
     }, 300); // Ajusta el valor del retraso según sea necesario
   });
 });
+

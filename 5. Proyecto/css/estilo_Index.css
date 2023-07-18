@@ -5,7 +5,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family:'Poppins',sans-serif;
+    font-family: Arial, sans-serif;
 	width: 100%;
 	height: 25%;
 	background-repeat: no-repeat;
@@ -132,7 +132,7 @@ nav ul li a:hover{			/* Para que el mouse pase por las letras se vean de otro co
 h1,h2,h4,h5, h6{
 	text-transform:uppercase;
 	color: #2D2D2D;
-	font-family: rale;
+	font-family: Arial, sans-serif;
 	letter-spacing: 1px;
 }
 h4{
@@ -231,7 +231,7 @@ p{
 }
 .grupo1{
 	width: 100%;
-	height: 300px;
+	height: 0px;
 	justify-content: center;
 }
 
@@ -252,7 +252,7 @@ p{
 
 .columnax3 h4,a{
 	color:#17202A;
-	font-family:'Poppins',sans-serif;
+	font-family: Arial, sans-serif;
 	text-decoration:none;
 }
 .columnax3 a:hover{

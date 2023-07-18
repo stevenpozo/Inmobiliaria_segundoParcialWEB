@@ -4,8 +4,9 @@
 /*MODAL BOX*/
 
 .modal-content{
-  background-color: rgba(188, 202, 228, 0.70);
-    backdrop-filter: blur(10px);
+  background-image: url(../img/img_comprar/background_ciudades.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 50px;
   width: 80%;
 }

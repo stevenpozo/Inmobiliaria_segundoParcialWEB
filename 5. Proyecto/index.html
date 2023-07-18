@@ -20,7 +20,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
 		crossorigin="anonymous"></script>
-	<link href="css/estilo.css" type="text/css" rel="stylesheet">
+	<link href="css/estilo_LoginYRegistro.css" type="text/css" rel="stylesheet">
 	<link href="css/estilo_login.css" type="text/css" rel="stylesheet">
 
 
@@ -31,12 +31,6 @@
 			/* Elimina el borde del iframe */
 		}
 	</style>
-	<script>
-		function resizeIframe() {
-			var iframe = document.getElementById("contenido_iframe");
-			iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
-		}
-	</script>
 </head>
 
 <body>
@@ -54,7 +48,7 @@
 				<div class="modal-body">
 					<div id="contenedor1">
 						<form action="php/registro.php" method="POST" id="formulario">
-							<h2>Registro</h2><br>
+							<center><h3 style="font-size: 20px;"><b>Registro</b></h3></center>
 
 							<label for="email">Dirección de Email:</label><br>
 							<input type="email" id="email" name="email" placeholder="steven@example.com"
@@ -92,7 +86,7 @@
 						<form action="php/login.php" method="POST" id="formulario">
 							<center><img src="img/img/login.png" style="z-index: 1; height: 50px; width: 50px;">
 							</center>
-							<center><b>Iniciar sesión</b></center>
+							<center><h3 style="font-size: 20px;"><b>Inicio Sesión</b></h3></center>
 
 							<label for="username">Usuario:</label>
 							<input type="text" id="username" name="username" required><br><br>
@@ -145,9 +139,9 @@
 						</li>
 						<li><a href="#"><i class="fa-solid fa-bars fa-bounce fa-xl"></i></a>
 							<ul>
-								<li><a href="#">Sobre nosotros</a></li>
-								<li><a href="#">Contactos</a></li>
-								<li><a href="index.html">Inicio</a></li>
+								<li><a href="html/somos.html" target="contenido_iframe">Sobre nosotros</a></li>
+								<li><a href="html/Contactos.html" target="contenido_iframe">Contactos</a></li>
+								<li><a href="index.html" target="contenido_iframe">Inicio</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -197,20 +191,16 @@
 			</div>
 			<div class="columnax3">
 				<i class="fa-solid fa-city">
-					<p></p>Provincias
+					<p></p>Inmobiliaria
 				</i>
-				<a href=""><br><br>Pichincha</a><br>
-				<a href="">Guayas</a><br>
-				<a href="">Imbabura</a><br>
-				<a href="">Manabi</a><br>
-				<a href="">SantaElena</a><br>
-				<a href="">SantoDomingo</a><br>
+				<a href="html/somos.html" target="contenido_iframe"><br><br>¿Quiénes somos?</a><br>
+				<a href="html/Contactos.html" target="contenido_iframe">Contactos</a><br>
 			</div>
 			<div class="columnax3">
 				<i class="fa-solid fa-house">SweetHouse</i>
-				<a href=""><br><br>Casas</a><br>
-				<a href="">Departamentos</a><br>
-				<a href="">Terrenos</a><br><br>
+				<a href="html/Casas.html" target="contenido_iframe"><br><br>Casas</a><br>
+				<a href="html/Departamentos.html" target="contenido_iframe">Departamentos</a><br>
+				<a href="html/terrenos.html" target="contenido_iframe">Terrenos</a><br><br>
 				<i class="fa-regular fa-thumbs-up">Siguenos</i>
 				<div id="facebook1"><a href="https://www.facebook.com/century21elite.ec/" target="none"
 						class="fa-brands fa-facebook"></a></div>
@@ -227,6 +217,16 @@
 		</div>
 	</div>
 	<script src="js/index.js"></script>
+	<script>
+		function resizeIframe() {
+			var iframe = document.getElementById("contenido_iframe");
+			iframe.style.height = "0"; // Restablecer la altura a 0 antes de obtener la nueva altura del contenido
+	
+			var newHeight = iframe.contentWindow.document.body.scrollHeight + "px";
+			iframe.style.height = newHeight;
+		}
+	</script>
+	
 	
 </body>
 
