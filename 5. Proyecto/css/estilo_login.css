@@ -57,14 +57,3 @@ input[type="submit"],[type="reset"]{
   border: 0;
   font-size: small;
 }
-
-#iniciar_sesion{
-  background-color: rgba(108, 7, 41, 1.00);
-  backdrop-filter: blur(2px);
-  border: none;
-  transition: transform 0.3s;
-}
-
-#iniciar_sesion:hover{
-  transform: scale(0.8);
-}

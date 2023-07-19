@@ -5,10 +5,14 @@
 
 .modal-content{
   background-color: rgba(188, 202, 228, 0.70);
-    backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   border-radius: 50px;
   width: 80%;
 }
+.close{
+      font-size: 30px;
+      color: rgba(108, 7, 41, 1.00);
+    }
 
 .modal-header{
   padding-right: 5%;
@@ -24,6 +28,8 @@
 }
 
 #formulario, #formulario2 {
+  background-color: rgba(188, 202, 228, 0.70);
+    backdrop-filter: blur(10px);
   font-family: Arial, sans-serif;
   font-size: small;
   text-align: justify-all;
