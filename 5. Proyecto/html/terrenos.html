@@ -1,257 +1,855 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>Terrenos</title>
-<link href="../css/estilo_Terrenos.css" type="text/css" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>Terrenos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+  <link href="../css/estilo.css" type="text/css" rel="stylesheet">
+  <link href="../css/estilo_casas.css" type="text/css" rel="stylesheet">
+
+  <style>
+    .house-details {
+      font-size: 15px;
+    }
+
+    input[type="button"] {
+      font-size: 15px;
+    }
+
+    h3 {
+      font-weight: bold;
+    }
+
+    .close{
+      font-size: 30px;
+      color: rgba(108, 7, 41, 1.00);
+    }
+  </style>
 </head>
 
 <body>
-<div id="container">
-  <div id="sidebar">
-    <ul>
-      <h3 id="text_ciudades">CIUDADES:</h3>
-      <li><a href="#Pichincha">Pichincha</a></li>
-      <li><a href="#Guayas">Guayas</a></li>
-      <li><a href="#Imbabura">Imbabura</a></li>
-      <li><a href="#Manabi">Manabí</a></li>
-      <li><a href="#SantaElena">Santa ELena</a></li>
-      <li><a href="#SantoDomingo">Santo Domingo</a></li>
-    </ul>
+  <div id="container">
+    <div id="sidebar">
+      <ul>
+        <h3 id="text_ciudades">CIUDADES:</h3>
+        <li><a href="#Pichincha">Pichincha</a></li>
+        <li><a href="#Guayas">Guayas</a></li>
+        <li><a href="#Imbabura">Imbabura</a></li>
+        <li><a href="#Manabi">Manabí</a></li>
+        <li><a href="#SantaElena">Santa ELena</a></li>
+        <li><a href="#SantoDomingo">Santo Domingo</a></li>
+      </ul>
+    </div>
+
+    <!-- FORMULARIO DE COMPRA-->
+    <div class="modal fade" id="myModalCompra" tabindex="-1" data-backdrop="static" data-keyboard="true"
+      aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">
+              <center><b>Contáctate con el propietario de este terreno</b></center>
+            </h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div id="contenedor">
+              <form ACTION="https://formsubmit.co/ricardoimbaquinga@gmail.com" id="formulario" name="form2" METHOD="post">
+                <label for="nombre">Nombres:</label><br>
+                <input type="text" id="nombre" name="nombre"
+                  pattern="^[a-zA-Z]+(\s[a-zA-Z]+)?(\s[a-zA-Z]+)?(\s[a-zA-Z]+)?$"
+                  placeholder="Escribe uno o dos nombres" required><br><br>
+
+                <label for="telefono">Teléfono:</label><br>
+                <input type="text" id="telefono" name="telefono" pattern="[0-9]{10}" maxlength="10"
+                  placeholder="0981515127" required><br><br>
+
+                <label for="cedula">Cédula:</label><br>
+                <input type="text" id="cedula" name="cedula" pattern="[0-9]{10}" maxlength="10" placeholder="0981515127"
+                  required><br><br>
+
+                <label for="email">Dirección de Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="steven@example.com"
+                  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required><br><br>
+
+                <label for="mensaje">Mensaje</label><br>
+                <input type="text" id="mensaje" name="mensaje" required><br><br>
+
+                <center><input type="submit" value="Enviar">
+                  <input type="reset" value="Resetear">
+                </center>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORMULARIO DE CONTACTO-->
+    <div class="modal fade" id="myModalContacto" tabindex="-1" data-backdrop="static" data-keyboard="true"
+      aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel2">
+              <center><b>Contacto de whatsapp</b></center>
+            </h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div id="contenedor2">
+              <form method="POST" id="formulario2">
+                <label for="nombre">Nombres:</label><br>
+                <input type="text" id="nombre2" name="nombre"
+                  pattern="^[a-zA-Z]+(\s[a-zA-Z]+)?(\s[a-zA-Z]+)?(\s[a-zA-Z]+)?$"
+                  placeholder="Escribe uno o dos nombres" required><br><br>
+
+                <label for="telefono">Teléfono:</label><br>
+                <input type="text" id="telefono2" name="telefono" pattern="[0-9]{10}" maxlength="10"
+                  placeholder="0981515127" required><br><br>
+
+                <label for="mensaje">Mensaje</label><br>
+                <textarea id="mensaje2" name="mensaje" rows="4" required></textarea><br><br>
+
+                <center><input type="submit" value="Enviar">
+                  <input type="reset" value="Resetear">
+                </center>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- CARRUSEL PICHINCHA-->
+     <div class="modal fade" id="myModal3" tabindex="-1" data-backdrop="static" data-keyboard="true"
+     aria-labelledby="myModalLabel">
+     <div class="modal-dialog modal-lg modal-dialog-centered">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h4 class="modal-title" id="myModalLabel3">Lotes Bifamiliares Desde 1.000 m²</h4>
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+         </div>
+         <div class="modal-body">
+           <div class="container">
+             <br>
+             <div id="theCarousel" class="carousel slide" data-ride="carousel">
+               <!-- Indicadores -->
+               <ol class="carousel-indicators">
+                 <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+                 <li data-target="#theCarousel" data-slide-to="1"></li>
+                 <li data-target="#theCarousel" data-slide-to="2"></li>
+
+               </ol>
+
+               <div class="carousel-inner" role="listbox">
+                 <div class="item active" style=" height: 400px;">
+                   <img
+                     src="img/img_terrenos/terreno1_1.jpg"
+                     alt="Ilustracion" class="carrusel_img" style="height: 300px;">
+                   <div class="carousel-caption d-none d-md-block">
+                     <h3>Jardín</h3>
+                     <p>Lotes Bifamiliares Desde 1.000 m²</p>
+                   </div>
+                 </div>
+
+                 <div class="item" style=" height: 400px;">
+                   <img
+                     src="img/img_terrenos/terreno1_2.jpg"
+                     alt="fotografia" class="carrusel_img" style="height: 300px;">
+                   <div class="carousel-caption d-none d-md-block">
+                     <h3>Área verde</h3>
+                     <p>Lotes Bifamiliares Desde 1.000 m²</p>
+                   </div>
+                 </div>
+
+                 <div class="item" style=" height: 400px;">
+                   <img src="img/img_terrenos/terreno1_3.jpg"
+                     alt="pintura" class="carrusel_img" style="height: 300px;">
+                   <div class="carousel-caption d-none d-md-block">
+                     <h3>Vía principal</h3>
+                     <p>Lotes Bifamiliares Desde 1.000 m²</p>
+                   </div>
+                 </div>
+
+                 <a class="left carousel-control" href="#theCarousel" role="button" data-slide="prev">
+                   <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                   <span class="sr-only">anterior</span>
+                 </a>
+                 <a class="right carousel-control" href="#theCarousel" role="button" data-slide="next">
+                   <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                   <span class="sr-only">siguiente</span>
+                 </a>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+
+
+   <!-- CARRUSEL GUAYAS-->
+   <div class="modal fade" id="myModal4" tabindex="-1" data-backdrop="static" data-keyboard="true"
+     aria-labelledby="myModalLabel">
+     <div class="modal-dialog modal-lg modal-dialog-centered">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h4 class="modal-title" id="myModalLabel4">Urbanización Peninsula</h4>
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+         </div>
+         <div class="modal-body">
+           <div class="container">
+             <br>
+             <div id="theCarousel2" class="carousel slide" data-ride="carousel">
+               <!-- Indicadores -->
+               <ol class="carousel-indicators">
+                 <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+                 <li data-target="#theCarousel" data-slide-to="1"></li>
+                 <li data-target="#theCarousel" data-slide-to="2"></li>
+                 <li data-target="#theCarousel" data-slide-to="3"></li>
+
+               </ol>
+
+               <div class="carousel-inner" role="listbox">
+                 <div class="item active" style=" height: 400px;">
+                   <img
+                     src="img/img_terrenos/terreno2_1.jpg"
+                     alt="Ilustracion" class="carrusel_img" style="height: 300px;">
+                   <div class="carousel-caption d-none d-md-block">
+                     <h3>Espacio 1</h3>
+                     <p>Urbanización Peninsula</p>
+                   </div>
+                 </div>
+
+                 <div class="item" style=" height: 400px;">
+                   <img
+                     src="img/img_terrenos/terreno2_2.jpg"
+                     alt="fotografia" class="carrusel_img" style="height: 300px;">
+                   <div class="carousel-caption d-none d-md-block">
+                     <h3> Espacio 2</h3>
+                     <p>Urbanización Peninsula</p>
+                   </div>
+                 </div>
+
+                 <div class="item" style=" height: 400px;">
+                   <img src="img/img_terrenos/terreno2_3.jpg"
+                     alt="pintura" class="carrusel_img" style="height: 300px;">
+                   <div class="carousel-caption d-none d-md-block">
+                     <h3>Espacio 3</h3>
+                     <p>Urbanización Peninsula</p>
+                   </div>
+                 </div>
+
+                 <a class="left carousel-control" href="#theCarousel2" role="button" data-slide="prev">
+                   <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                   <span class="sr-only">anterior</span>
+                 </a>
+                 <a class="right carousel-control" href="#theCarousel2" role="button" data-slide="next">
+                   <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                   <span class="sr-only">siguiente</span>
+                 </a>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <!-- CARRUSEL GUAYAS 1-->
+   <div class="modal fade" id="myModal5" tabindex="-1" data-backdrop="static" data-keyboard="true"
+     aria-labelledby="myModalLabel">
+     <div class="modal-dialog modal-lg modal-dialog-centered">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h4 class="modal-title" id="myModalLabel5">Terreno / Lote</h4>
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+         </div>
+         <div class="modal-body">
+           <div class="container">
+             <br>
+             <div id="theCarousel3" class="carousel slide" data-ride="carousel">
+               <!-- Indicadores -->
+               <ol class="carousel-indicators">
+                 <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+                 <li data-target="#theCarousel" data-slide-to="1"></li>
+                 <li data-target="#theCarousel" data-slide-to="2"></li>
+
+               </ol>
+
+               <div class="carousel-inner" role="listbox">
+                 <div class="item active" style=" height: 400px;">
+                   <img
+                     src="img/img_terrenos/terreno3_1.jpg"
+                     alt="Ilustracion" class="carrusel_img" style="height: 300px;">
+                   <div class="carousel-caption d-none d-md-block">
+                     <h3>Luz eléctrica </h3>
+                     <p>Terreno / Lote</p>
+                   </div>
+                 </div>
+
+                 <div class="item" style=" height: 400px;">
+                   <img
+                     src="img/img_terrenos/terreno3_2.jpg"
+                     alt="fotografia" class="carrusel_img" style="height: 300px;">
+                   <div class="carousel-caption d-none d-md-block">
+                     <h3> Alcantarillado</h3>
+                     <p>Terreno / Lote</p>
+                   </div>
+                 </div>
+
+                 <div class="item" style=" height: 400px;">
+                   <img src="img/img_terrenos/terreno3_3.jpg"
+                     alt="pintura" class="carrusel_img" style="height: 300px;">
+                   <div class="carousel-caption d-none d-md-block">
+                     <h3>Vía principal</h3>
+                     <p>Terreno / Lote</p>
+                   </div>
+                 </div>
+
+                 <a class="left carousel-control" href="#theCarousel3" role="button" data-slide="prev">
+                   <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                   <span class="sr-only">anterior</span>
+                 </a>
+                 <a class="right carousel-control" href="#theCarousel3" role="button" data-slide="next">
+                   <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                   <span class="sr-only">siguiente</span>
+                 </a>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+
+
+   <!-- CARRUSEL IMBABURA-->
+   <div class="modal fade" id="myModal6" tabindex="-1" data-backdrop="static" data-keyboard="true"
+     aria-labelledby="myModalLabel">
+     <div class="modal-dialog modal-lg modal-dialog-centered">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h4 class="modal-title" id="myModalLabel6">Conjunto habitacional VIP (Vivienda de Interés Público)</h4>
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+         </div>
+         <div class="modal-body">
+           <div class="container">
+             <br>
+             <div id="theCarousel4" class="carousel slide" data-ride="carousel">
+               <!-- Indicadores -->
+               <ol class="carousel-indicators">
+                 <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+                 <li data-target="#theCarousel" data-slide-to="1"></li>
+                 <li data-target="#theCarousel" data-slide-to="2"></li>
+                 <li data-target="#theCarousel" data-slide-to="3"></li>
+
+               </ol>
+
+               <div class="carousel-inner" role="listbox">
+                 <div class="item active" style=" height: 400px;">
+                   <img
+                     src="img/img_terrenos/terreno4_1.jpg"
+                     alt="Ilustracion" class="carrusel_img" style="height: 300px;">
+                   <div class="carousel-caption d-none d-md-block">
+                     <h3>Dimensiones </h3>
+                     <p>Conjunto habitacional VIP (Vivienda de Interés Público)</p>
+                   </div>
+                 </div>
+
+                 <div class="item" style=" height: 400px;">
+                   <img
+                     src="img/img_terrenos/terreno4_2.jpg"
+                     alt="fotografia" class="carrusel_img" style="height: 300px;">
+                   <div class="carousel-caption d-none d-md-block">
+                     <h3> Características</h3>
+                     <p>Conjunto habitacional VIP (Vivienda de Interés Público)</p>
+                   </div>
+                 </div>
+
+                 <div class="item" style=" height: 400px;">
+                   <img src="img/img_terrenos/terreno4_3.jpg"
+                     alt="pintura" class="carrusel_img" style="height: 300px;">
+                   <div class="carousel-caption d-none d-md-block">
+                     <h3>Características</h3>
+                     <p>Conjunto habitacional VIP (Vivienda de Interés Público)</p>
+                   </div>
+                 </div>
+
+                 <div class="item" style=" height: 400px;">
+                   <img src="img/img_terrenos/terreno4_4.jpg"
+                     alt="pintura" class="carrusel_img" style="height: 300px;">
+                   <div class="carousel-caption d-none d-md-block">
+                     <h3>Características</h3>
+                     <p>Conjunto habitacional VIP (Vivienda de Interés Público)</p>
+                   </div>
+                 </div>
+
+                 <a class="left carousel-control" href="#theCarousel4" role="button" data-slide="prev">
+                   <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                   <span class="sr-only">anterior</span>
+                 </a>
+                 <a class="right carousel-control" href="#theCarousel4" role="button" data-slide="next">
+                   <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                   <span class="sr-only">siguiente</span>
+                 </a>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+
+
+   <!-- CARRUSEL MANABÍ-->
+   <div class="modal fade" id="myModal7" tabindex="-1" data-backdrop="static" data-keyboard="true"
+     aria-labelledby="myModalLabel">
+     <div class="modal-dialog modal-lg modal-dialog-centered">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h4 class="modal-title" id="myModalLabel6">
+            Maskana Residences</h4>
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+         </div>
+         <div class="modal-body">
+           <div class="container">
+             <br>
+             <div id="theCarousel5" class="carousel slide" data-ride="carousel">
+               <!-- Indicadores -->
+               <ol class="carousel-indicators">
+                 <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+                 <li data-target="#theCarousel" data-slide-to="1"></li>
+                 <li data-target="#theCarousel" data-slide-to="2"></li>
+                 <li data-target="#theCarousel" data-slide-to="3"></li>
+
+               </ol>
+
+               <div class="carousel-inner" role="listbox">
+                 <div class="item active" style=" height: 400px;">
+                   <img
+                     src="img/img_terrenos/terreno5_1.jpg"
+                     alt="Ilustracion" class="carrusel_img" style="height: 300px;">
+                   <div class="carousel-caption d-none d-md-block">
+                     <h3>Seguridad</h3>
+                     <p>
+                      Maskana Residences</p>
+                   </div>
+                 </div>
+
+                 <div class="item" style=" height: 400px;">
+                   <img
+                     src="img/img_terrenos/terreno5_2.jpg"
+                     alt="fotografia" class="carrusel_img" style="height: 300px;">
+                   <div class="carousel-caption d-none d-md-block">
+                     <h3>Área recreativa</h3>
+                     <p>
+                      Maskana Residences</p>
+                   </div>
+                 </div>
+
+                 <div class="item" style=" height: 400px;">
+                   <img src="img/img_terrenos/terreno5_3.jpg"
+                     alt="pintura" class="carrusel_img" style="height: 300px;">
+                   <div class="carousel-caption d-none d-md-block">
+                     <h3>Área verde</h3>
+                     <p>
+                      Maskana Residences</p>
+                   </div>
+                 </div>
+
+                 <div class="item" style=" height: 400px;">
+                   <img src="img/img_terrenos/terreno5_4.jpg"
+                     alt="pintura" class="carrusel_img" style="height: 300px;">
+                   <div class="carousel-caption d-none d-md-block">
+                     <h3>Área privada</h3>
+                     <p>
+                      Maskana Residences</p>
+                   </div>
+                 </div>
+
+                 <a class="left carousel-control" href="#theCarousel5" role="button" data-slide="prev">
+                   <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                   <span class="sr-only">anterior</span>
+                 </a>
+                 <a class="right carousel-control" href="#theCarousel5" role="button" data-slide="next">
+                   <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                   <span class="sr-only">siguiente</span>
+                 </a>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+
+
+       <!-- CARRUSEL SANTA ELENA-->
+       <div class="modal fade" id="myModal8" tabindex="-1" data-backdrop="static" data-keyboard="true"
+       aria-labelledby="myModalLabel">
+       <div class="modal-dialog modal-lg modal-dialog-centered">
+         <div class="modal-content">
+           <div class="modal-header">
+             <h4 class="modal-title" id="myModalLabel6">Club San Miguel</h4>
+             <button type="button" class="close" data-dismiss="modal">&times;</button>
+           </div>
+           <div class="modal-body">
+             <div class="container">
+               <br>
+               <div id="theCarousel6" class="carousel slide" data-ride="carousel">
+                 <!-- Indicadores -->
+                 <ol class="carousel-indicators">
+                   <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+                   <li data-target="#theCarousel" data-slide-to="1"></li>
+                   <li data-target="#theCarousel" data-slide-to="2"></li>
+                   <li data-target="#theCarousel" data-slide-to="3"></li>
+ 
+                 </ol>
+ 
+                 <div class="carousel-inner" role="listbox">
+                   <div class="item active" style=" height: 400px;">
+                     <img
+                       src="img/img_terrenos/terreno6_1.jpg"
+                       alt="Ilustracion" class="carrusel_img" style="height: 300px;">
+                     <div class="carousel-caption d-none d-md-block">
+                       <h3>Via privada </h3>
+                       <p>CClub San Miguel</p>
+                     </div>
+                   </div>
+ 
+                   <div class="item" style=" height: 400px;">
+                     <img
+                       src="img/img_terrenos/terreno6_2.jpg"
+                       alt="fotografia" class="carrusel_img" style="height: 300px;">
+                     <div class="carousel-caption d-none d-md-block">
+                       <h3>Vía</h3>
+                       <p>Club San Miguel</p>
+                     </div>
+                   </div>
+ 
+                   <div class="item" style=" height: 400px;">
+                     <img src="img/img_terrenos/terreno6_3.jpg"
+                       alt="pintura" class="carrusel_img" style="height: 300px;">
+                     <div class="carousel-caption d-none d-md-block">
+                       <h3>Entrada privada</h3>
+                       <p>Club San Miguel</p>
+                     </div>
+                   </div>
+ 
+                   <div class="item" style=" height: 400px;">
+                     <img src="img/img_terrenos/terreno6_4.jpg"
+                       alt="pintura" class="carrusel_img" style="height: 300px;">
+                     <div class="carousel-caption d-none d-md-block">
+                       <h3>Vía interna</h3>
+                       <p>Club San Miguel</p>
+                     </div>
+                   </div>
+ 
+                   <a class="left carousel-control" href="#theCarousel6" role="button" data-slide="prev">
+                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                     <span class="sr-only">anterior</span>
+                   </a>
+                   <a class="right carousel-control" href="#theCarousel6" role="button" data-slide="next">
+                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                     <span class="sr-only">siguiente</span>
+                   </a>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+
+
+
+
+
+
+
+
+
+    <!-- CONTENEDOR DE LA CASA COMPLETA-->
+    <div class="cont_info">
+
+      <!-- PICHINCHA -->
+      <div class="house-info">
+        <div class="cont_imgCasa"><img class="house-image" src="img/img_terrenos/terreno1.jpg"
+            alt="Imagen de la casa" class="btn btn-primary" data-toggle="modal" data-target="#myModal3"></div>
+        <div class="house-details">
+          <h3 class="titulos_casas" id="Pichincha">Lotes Bifamiliares Desde 1.000 m²</h3>
+          <div class="precios">
+            <p class="text_precios">Precios:</p>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="t_tabla">DESDE</td>
+                  <td class="t_tabla">HASTA</td>
+                </tr>
+                <tr>
+                  <td class="precio_tabla">USD 126.990</td>
+                  <td class="precio_tabla">USD 173.372</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="cosas_casa">
+            <p class="text_espacios">Espacios:</p>
+            <div class="tipos_caracteristicas">Jardin</div>
+            <div class="tipos_caracteristicas">Área verde</div>
+            <div class="tipos_caracteristicas">Desde 1.000 m²</div>
+            <div class="tipos_caracteristicas">Vía principal</div>
+          </div>
+          <div class="ubicacion">
+            <p class="text_ubicacion">Ubicación:</p>
+            <p>Manuel Benitez y Alfonso Tufiño, Norte de Quito, Quito | Pichincha &nbsp;&nbsp;<a
+                href="https://goo.gl/maps/s2HKSS4MFZQRYYfk6" target="new"><img class="img_ubicacion"
+                  src="img/img_comprar/ubicacion.png" alt="" /> </a></p>
+          </div>
+          <div class="contactos_compra">
+            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra" value="Comprar">
+            <img class="img_contactosCompra" src="img/img_comprar/whatsapp.png" alt="" class="btn btn-primary"
+              data-toggle="modal" data-target="#myModalContacto" />
+          </div>
+        </div>
+      </div>
+
+      <!-- GUAYAS -->
+      <div class="house-info">
+        <div class="cont_imgCasa"><img class="house-image" src="img/img_terrenos/terreno2.jpg"
+            alt="Imagen de la casa" class="btn btn-primary" data-toggle="modal" data-target="#myModal4"></div>
+        <div class="house-details">
+          <h3 class="titulos_casas" id="Guayas">Urbanización Peninsula</h3>
+          <h3 class="titulos_casas"></h3>
+          <div class="precios">
+            <p class="text_precios">Precios:</p>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="t_tabla">DESDE</td>
+                  <td class="t_tabla">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="precio_tabla">USD 651.848</td>
+                  <td class="precio_tabla">&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="cosas_casa">
+            <p class="text_espacios">Espacios:</p>
+            <div class="tipos_caracteristicas">Área social</div>
+            <div class="tipos_caracteristicas">Piscina</div>
+            <div class="tipos_caracteristicas">Gimnasio</div>
+            <div class="tipos_caracteristicas">Canchas Deportivas</div>
+            <div class="tipos_caracteristicas">Seguridad 24/7</div>
+            <div class="tipos_caracteristicas">766 m²</div>
+          </div>
+          <div class="ubicacion">
+            <p class="text_ubicacion">Ubicación:</p>
+            <p>Isla Mocolí, Via Samborondón, Km 6 | Guayas&nbsp;&nbsp;<a href="https://goo.gl/maps/bgedd8uqffpnUJx16"
+                target="new"><img class="img_ubicacion" src="img/img_comprar/ubicacion.png" alt="" /> </a></p>
+          </div>
+          <div class="contactos_compra">
+            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra" value="Comprar">
+            <img class="img_contactosCompra" src="img/img_comprar/whatsapp.png" alt="" class="btn btn-primary"
+              data-toggle="modal" data-target="#myModalContacto" />
+          </div>
+        </div>
+      </div>
+
+      <!-- IMBABURA -->
+      <div class="house-info">
+        <div class="cont_imgCasa"><img class="house-image" src="img/img_terrenos/terreno3.jpg"
+            alt="Imagen de la casa" class="btn btn-primary" data-toggle="modal" data-target="#myModal5"></div>
+        <div class="house-details">
+          <h3 class="titulos_casas" id="Imbabura">Terreno / Lote</h3>
+          <div class="precios">
+            <p class="text_precios">Precios:</p>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="t_tabla">DESDE</td>
+                  <td class="t_tabla">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="precio_tabla">USD 300.000</td>
+                  <td class="precio_tabla">&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="cosas_casa">
+            <p class="text_espacios">Espacios:</p>
+            <div class="tipos_caracteristicas">Acceso a luz eléctrica</div>
+            <div class="tipos_caracteristicas">Alcantarillado</div>
+            <div class="tipos_caracteristicas">Agua potable</div>
+            <div class="tipos_caracteristicas">Agua de riego</div>
+            <div class="tipos_caracteristicas">Línea de buses interprovinciales y municipales</div>
+            <div class="tipos_caracteristicas">200m²</div>
+          </div>
+          <div class="ubicacion">
+            <p class="text_ubicacion">Ubicación:</p>
+            <p>Huertos Familiares, Sur de Ibarra, Ibarra | Imbabura&nbsp;&nbsp;<a
+                href="https://goo.gl/maps/TuUiPX4AGu6xrEHi8" target="new"><img class="img_ubicacion"
+                  src="img/img_comprar/ubicacion.png" alt="" /> </a></p>
+          </div>
+          <div class="contactos_compra">
+            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra" value="Comprar">
+            <img class="img_contactosCompra" src="img/img_comprar/whatsapp.png" alt="" class="btn btn-primary"
+              data-toggle="modal" data-target="#myModalContacto" />
+          </div>
+        </div>
+      </div>
+
+      <!-- MANABI -->
+      <div class="house-info">
+        <div class="cont_imgCasa"><img class="house-image" src="img/img_terrenos/terreno4.jpg"
+            alt="Imagen de la casa" class="btn btn-primary" data-toggle="modal" data-target="#myModal6"></div>
+        <div class="house-details">
+          <h3 class="titulos_casas" id="Manabi">Conjunto habitacional VIP (Vivienda de Interés Público)</h3>
+          <div class="precios">
+            <p class="text_precios">Precios:</p>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="t_tabla">DESDE</td>
+                  <td class="t_tabla">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="precio_tabla">USD 15.000</td>
+                  <td class="precio_tabla">&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="cosas_casa">
+            <p class="text_espacios">Espacios:</p>
+            <div class="tipos_caracteristicas">Todos los servicios básicos</div>
+            <div class="tipos_caracteristicas"> Piscina, sauna, turco, hidromasaje</div>
+            <div class="tipos_caracteristicas">Juegos infantiles</div>
+            <div class="tipos_caracteristicas">Gimnasio</div>
+            <div class="tipos_caracteristicas">Canchas de uso múltiple</div>
+            <div class="tipos_caracteristicas">220m²</div>
+          </div>
+          <div class="ubicacion">
+            <p class="text_ubicacion">Ubicación:</p>
+            <p>Via Manta-Montecristi, Norte de Montecristi, Montecristi | Manabí &nbsp;&nbsp;<a
+                href="https://goo.gl/maps/RG2XMC9M7qqETK6N6" target="new"><img class="img_ubicacion"
+                  src="img/img_comprar/ubicacion.png" alt="" /> </a></p>
+          </div>
+          <div class="contactos_compra">
+            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra" value="Comprar">
+            <img class="img_contactosCompra" src="img/img_comprar/whatsapp.png" alt="" class="btn btn-primary"
+              data-toggle="modal" data-target="#myModalContacto" />
+          </div>
+        </div>
+      </div>
+
+      <!-- SANTA ELENA -->
+      <div class="house-info">
+        <div class="cont_imgCasa"><img class="house-image" src="img/img_terrenos/terreno5.jpg"
+            alt="Imagen de la casa" class="btn btn-primary" data-toggle="modal" data-target="#myModal7"></div>
+        <div class="house-details">
+          <h3 class="titulos_casas" id="SantaElena">Maskana Residences</h3>
+          <div class="precios">
+            <p class="text_precios">Precios:</p>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="t_tabla">DESDE</td>
+                  <td class="t_tabla">HASTA</td>
+                </tr>
+                <tr>
+                  <td class="precio_tabla">USD 70.000</td>
+                  <td class="precio_tabla">USD 110.000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="cosas_casa">
+            <p class="text_espacios">Espacios:</p>
+            <div class="tipos_caracteristicas">60 unidades</div>
+            <div class="tipos_caracteristicas">2 estacionamientos</div>
+            <div class="tipos_caracteristicas">Bosques endémicos y vida silvestre</div>
+            <div class="tipos_caracteristicas">Seguridad 24/7</div>
+            <div class="tipos_caracteristicas">500 m²</div>
+          </div>
+          <div class="ubicacion">
+            <p class="text_ubicacion">Ubicación:</p>
+            <p>Km 1.5 vía a San Vicente de Loja, Olón | Santa Elena &nbsp;&nbsp;<a
+                href="https://goo.gl/maps/oN1rBuSULtuVtFVj7" target="new"><img class="img_ubicacion"
+                  src="img/img_comprar/ubicacion.png" alt="" /> </a></p>
+          </div>
+          <div class="contactos_compra">
+            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra" value="Comprar">
+            <img class="img_contactosCompra" src="img/img_comprar/whatsapp.png" alt="" class="btn btn-primary"
+              data-toggle="modal" data-target="#myModalContacto" />
+          </div>
+        </div>
+      </div>
+
+      <!-- SANTO DOMINGO -->
+      <div class="house-info">
+        <div class="cont_imgCasa"><img class="house-image" src="img/img_terrenos/terreno6.jpg"
+            alt="Imagen de la casa" class="btn btn-primary" data-toggle="modal" data-target="#myModal8"></div>
+        <div class="house-details">
+          <h3 class="titulos_casas" id="SantoDomingo">Club San Miguel</h3>
+          <div class="precios">
+            <p class="text_precios">Precios:</p>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="t_tabla">DESDE</td>
+                  <td class="t_tabla">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="precio_tabla">USD 30.000</td>
+                  <td class="precio_tabla">&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="cosas_casa">
+            <p class="text_espacios">Espacios:</p>
+            <div class="tipos_caracteristicas">Vías asfaltadas</div>
+            <div class="tipos_caracteristicas">Luz soterrada</div>
+            <div class="tipos_caracteristicas">Áreas comunales</div>
+            <div class="tipos_caracteristicas">Todos los servicios básicos</div>
+            <div class="tipos_caracteristicas">600m²</div>
+          </div>
+          <div class="ubicacion">
+            <p class="text_ubicacion">Ubicación:</p>
+            <p>ByPass Quito-Quevedo, Norte de Santo Domingo | Santo Domingo&nbsp;&nbsp;<a
+                href="https://goo.gl/maps/QMeX8vXGwYunkLnt9" target="new"><img class="img_ubicacion"
+                  src="img/img_comprar/ubicacion.png" alt="" /> </a></p>
+          </div>
+          <div class="contactos_compra">
+            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra" value="Comprar">
+            <img class="img_contactosCompra" src="img/img_comprar/whatsapp.png" alt="" class="btn btn-primary"
+              data-toggle="modal" data-target="#myModalContacto" />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="cont_info"> 
-    
-    <!-- PICHINCHA -->
-    <div class="house-info">
-      <div class="cont_imgCasa"><img class="house-image" src="../img/img_terrenos/terreno1.jpg" alt="Imagen de la casa"></div>
-      <div class="house-details">
-        <h3 class="titulos_casas" id="Pichincha">Lotes Bifamiliares Desde 1.000 m²</h3>
-        <div class="precios">
-          <p class="text_precios">Precios:</p>
-          <table>
-            <tbody>
-              <tr>
-                <td class="t_tabla">DESDE</td>
-                <td class="t_tabla">HASTA</td>
-              </tr>
-              <tr>
-                <td class="precio_tabla">USD 126.990</td>
-                <td class="precio_tabla">USD 173.372</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="cosas_casa">
-          <p class="text_espacios">Espacios:</p>
-          <div class="tipos_caracteristicas">Jardin</div>
-          <div class="tipos_caracteristicas">Seguridad</div>
-          <div class="tipos_caracteristicas">Desde 1.000 m²</div>
-        </div>
-        <div class="ubicacion">
-          <p class="text_ubicacion">Ubicación:</p>
-          <p>Manuel Benitez y Alfonso Tufiño, Norte de Quito, Quito | Pichincha &nbsp;&nbsp;<a href="https://goo.gl/maps/s2HKSS4MFZQRYYfk6" target="new"><img class="img_ubicacion" src="../img/img_comprar/ubicacion.png" alt=""/> </a></p>
-        </div>
-        <div class="contactos_compra">
-          <input type="button" value="Comprar">
-          <img class="img_contactosCompra" src="../img/img_comprar/whatsapp.png" alt=""/> </div>
-      </div>
-    </div>
-    
-    <!-- GUAYAS -->
-    <div class="house-info">
-      <div class="cont_imgCasa"><img class="house-image" src="../img/img_terrenos/terreno2.jpg" alt="Imagen de la casa"></div>
-      <div class="house-details">
-        <h3 class="titulos_casas" id="Guayas">Urbanización Peninsula</h3>
-        <h3 class="titulos_casas"></h3>
-        <div class="precios">
-          <p class="text_precios">Precios:</p>
-          <table>
-            <tbody>
-              <tr>
-                <td class="t_tabla">DESDE</td>
-                <td class="t_tabla">&nbsp;</td>
-              </tr>
-              <tr>
-                <td class="precio_tabla">USD 651.848</td>
-                <td class="precio_tabla">&nbsp;</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="cosas_casa">
-          <p class="text_espacios">Espacios:</p>
-          <div class="tipos_caracteristicas">Área social</div>
-          <div class="tipos_caracteristicas">Piscina</div>
-          <div class="tipos_caracteristicas">Gimnasio</div>
-          <div class="tipos_caracteristicas">Canchas Deportivas</div>
-          <div class="tipos_caracteristicas">Seguridad 24/7</div>
-          <div class="tipos_caracteristicas">766 m²</div>
-        </div>
-        <div class="ubicacion">
-          <p class="text_ubicacion">Ubicación:</p>
-          <p>Isla Mocolí, Via Samborondón, Km 6 | Guayas&nbsp;&nbsp;<a href="https://goo.gl/maps/bgedd8uqffpnUJx16" target="new"><img class="img_ubicacion" src="../img/img_comprar/ubicacion.png" alt=""/> </a></p>
-        </div>
-        <div class="contactos_compra">
-          <input type="button" value="Comprar">
-          <img class="img_contactosCompra" src="../img/img_comprar/whatsapp.png" alt=""/> </div>
-      </div>
-    </div>
-    
-    <!-- IMBABURA -->
-    <div class="house-info">
-      <div class="cont_imgCasa"><img class="house-image" src="../img/img_terrenos/terreno3.jpg" alt="Imagen de la casa"></div>
-      <div class="house-details">
-        <h3 class="titulos_casas" id="Imbabura">Terreno / Lote</h3>
-        <div class="precios">
-          <p class="text_precios">Precios:</p>
-          <table>
-            <tbody>
-              <tr>
-                <td class="t_tabla">DESDE</td>
-                <td class="t_tabla">&nbsp;</td>
-              </tr>
-              <tr>
-                <td class="precio_tabla">USD 300.000</td>
-                <td class="precio_tabla">&nbsp;</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="cosas_casa">
-          <p class="text_espacios">Espacios:</p>
-          <div class="tipos_caracteristicas">Acceso a luz eléctrica</div>
-          <div class="tipos_caracteristicas">Alcantarillado</div>
-          <div class="tipos_caracteristicas">Agua potable</div>
-          <div class="tipos_caracteristicas">Agua de riego</div>
-          <div class="tipos_caracteristicas">Línea de buses interprovinciales y municipales</div>
-          <div class="tipos_caracteristicas">200m²</div>
-        </div>
-        <div class="ubicacion">
-          <p class="text_ubicacion">Ubicación:</p>
-          <p>Huertos Familiares, Sur de Ibarra, Ibarra | Imbabura&nbsp;&nbsp;<a href="https://goo.gl/maps/TuUiPX4AGu6xrEHi8" target="new"><img class="img_ubicacion" src="../img/img_comprar/ubicacion.png" alt=""/> </a></p>
-        </div>
-        <div class="contactos_compra">
-          <input type="button" value="Comprar">
-          <img class="img_contactosCompra" src="../img/img_comprar/whatsapp.png" alt=""/> </div>
-      </div>
-    </div>
-    
-    <!-- MANABI -->
-    <div class="house-info">
-      <div class="cont_imgCasa"><img class="house-image" src="../img/img_terrenos/terreno4.jpg" alt="Imagen de la casa"></div>
-      <div class="house-details">
-        <h3 class="titulos_casas" id="Manabi">Conjunto habitacional VIP (Vivienda de Interés Público)</h3>
-        <div class="precios">
-          <p class="text_precios">Precios:</p>
-          <table>
-            <tbody>
-              <tr>
-                <td class="t_tabla">DESDE</td>
-                <td class="t_tabla">&nbsp;</td>
-              </tr>
-              <tr>
-                <td class="precio_tabla">USD 15.000</td>
-                <td class="precio_tabla">&nbsp;</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="cosas_casa">
-          <p class="text_espacios">Espacios:</p>
-          <div class="tipos_caracteristicas">Todos los servicios básicos</div>
-          <div class="tipos_caracteristicas"> Piscina, sauna, turco, hidromasaje</div>
-          <div class="tipos_caracteristicas">Juegos infantiles</div>
-          <div class="tipos_caracteristicas">Gimnasio</div>
-          <div class="tipos_caracteristicas">Canchas de uso múltiple</div>
-          <div class="tipos_caracteristicas">220m²</div>
-        </div>
-        <div class="ubicacion">
-          <p class="text_ubicacion">Ubicación:</p>
-          <p>Via Manta-Montecristi, Norte de Montecristi, Montecristi | Manabí &nbsp;&nbsp;<a href="https://goo.gl/maps/RG2XMC9M7qqETK6N6" target="new"><img class="img_ubicacion" src="../img/img_comprar/ubicacion.png" alt=""/> </a></p>
-        </div>
-        <div class="contactos_compra">
-          <input type="button" value="Comprar">
-          <img class="img_contactosCompra" src="../img/img_comprar/whatsapp.png" alt=""/> </div>
-      </div>
-    </div>
-    
-    <!-- SANTA ELENA -->
-    <div class="house-info">
-      <div class="cont_imgCasa"><img class="house-image" src="../img/img_terrenos/terreno5.jpg" alt="Imagen de la casa"></div>
-      <div class="house-details">
-        <h3 class="titulos_casas" id="SantaElena">Maskana Residences</h3>
-        <div class="precios">
-          <p class="text_precios">Precios:</p>
-          <table>
-            <tbody>
-              <tr>
-                <td class="t_tabla">DESDE</td>
-                <td class="t_tabla">HASTA</td>
-              </tr>
-              <tr>
-                <td class="precio_tabla">USD 70.000</td>
-                <td class="precio_tabla">USD 110.000</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="cosas_casa">
-          <p class="text_espacios">Espacios:</p>
-          <div class="tipos_caracteristicas">60 unidades</div>
-          <div class="tipos_caracteristicas">2 estacionamientos</div>
-          <div class="tipos_caracteristicas">Bosques endémicos y vida silvestre</div>
-          <div class="tipos_caracteristicas">Seguridad 24/7</div>
-          <div class="tipos_caracteristicas">500 m²</div>
-        </div>
-        <div class="ubicacion">
-          <p class="text_ubicacion">Ubicación:</p>
-          <p>Km 1.5 vía a San Vicente de Loja, Olón | Santa Elena  &nbsp;&nbsp;<a href="https://goo.gl/maps/oN1rBuSULtuVtFVj7" target="new"><img class="img_ubicacion" src="../img/img_comprar/ubicacion.png" alt=""/> </a></p>
-        </div>
-        <div class="contactos_compra">
-          <input type="button" value="Comprar">
-          <img class="img_contactosCompra" src="../img/img_comprar/whatsapp.png" alt=""/> </div>
-      </div>
-    </div>
-    
-    <!-- SANTO DOMINGO -->
-    <div class="house-info">
-      <div class="cont_imgCasa"><img class="house-image" src="../img/img_terrenos/terreno6.jpg" alt="Imagen de la casa"></div>
-      <div class="house-details">
-        <h3 class="titulos_casas" id="SantoDomingo">Club San Miguel</h3>
-        <div class="precios">
-          <p class="text_precios">Precios:</p>
-          <table>
-            <tbody>
-              <tr>
-                <td class="t_tabla">DESDE</td>
-                <td class="t_tabla">&nbsp;</td>
-              </tr>
-              <tr>
-                <td class="precio_tabla">USD 30.000</td>
-                <td class="precio_tabla">&nbsp;</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="cosas_casa">
-          <p class="text_espacios">Espacios:</p>
-          <div class="tipos_caracteristicas">Vías asfaltadas</div>
-          <div class="tipos_caracteristicas">Luz soterrada</div>
-          <div class="tipos_caracteristicas">Áreas comunales</div>
-          <div class="tipos_caracteristicas">Todos los servicios básicos</div>
-          <div class="tipos_caracteristicas">600m²</div>
-        </div>
-        <div class="ubicacion">
-          <p class="text_ubicacion">Ubicación:</p>
-          <p>ByPass Quito-Quevedo, Norte de Santo Domingo | Santo Domingo&nbsp;&nbsp;<a href="https://goo.gl/maps/QMeX8vXGwYunkLnt9" target="new"><img class="img_ubicacion" src="../img/img_comprar/ubicacion.png" alt=""/> </a></p>
-        </div>
-        <div class="contactos_compra">
-          <input type="button" value="Comprar">
-          <img class="img_contactosCompra" src="../img/img_comprar/whatsapp.png" alt=""/> </div>
-      </div>
-    </div>
-  </div>
-</div>
 </body>
+
 </html>
