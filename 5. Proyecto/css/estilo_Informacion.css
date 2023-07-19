@@ -45,7 +45,7 @@ td,th{
 }
 
 /*Seccion de información de las casas*/
-.div7 {
+.div7, .div8 , .div9{
     display: flex;
     flex-direction: row;
     align-items: center;
