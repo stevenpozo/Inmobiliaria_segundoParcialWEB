@@ -513,6 +513,7 @@ img {
 	top: 200px;
 	z-index: 100;
 	left: 0;
+	opacity: 0.5;
 }
 
 #facebook a {
@@ -520,7 +521,7 @@ img {
 	padding: 10px 20px;
 	color: #fff;
 	text-decoration: none;
-	width: 50px;
+	width: 25px;
 	transition: all .4s ease;
 	/*que sea lento y despues mas rapido */
 }
@@ -535,7 +536,7 @@ img {
 	padding: 10px 20px;
 	color: #fff;
 	text-decoration: none;
-	width: 50px;
+	width: 25px;
 	transition: all .4s ease;
 }
 
@@ -549,7 +550,7 @@ img {
 	padding: 10px 20px;
 	color: #fff;
 	text-decoration: none;
-	width: 50px;
+	width: 25px;
 	transition: all .4s ease;
 }
 
@@ -563,7 +564,7 @@ img {
 	padding: 10px 20px;
 	color: #fff;
 	text-decoration: none;
-	width: 50px;
+	width: 25px;
 	transition: all .4s ease;
 }
 
