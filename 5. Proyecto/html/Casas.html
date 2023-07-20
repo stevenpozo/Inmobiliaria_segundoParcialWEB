@@ -1,0 +1,987 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Casas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+  <link href="../css/estilo.css" type="text/css" rel="stylesheet">
+  <link href="../css/estilo_casas.css" type="text/css" rel="stylesheet">
+
+
+  <style>
+    .house-details {
+      font-size: 15px;
+    }
+
+    input[type="button"] {
+      font-size: 15px;
+    }
+
+    h3 {
+      font-weight: bold;
+    }
+
+    .close{
+      font-size: 30px;
+      color: rgba(108, 7, 41, 1.00);
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="sidebar">
+      <ul>
+        <h3 id="text_ciudades">CIUDADES:</h3>
+        <li><a href="#Pichincha">Pichincha</a></li>
+        <li><a href="#Guayas">Guayas</a></li>
+        <li><a href="#Imbabura">Imbabura</a></li>
+        <li><a href="#Manabi">Manabí</a></li>
+        <li><a href="#SantaElena">Santa ELena</a></li>
+        <li><a href="#SantoDomingo">Santo Domingo</a></li>
+      </ul>
+    </div>
+
+    <!-- FORMULARIO DE COMPRA-->
+    <div class="modal fade" id="myModalCompra" tabindex="-1" data-backdrop="static" data-keyboard="true"
+      aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-top">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">
+              <center><b>Contáctate con el propietario de esta casa</b></center>
+            </h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div id="contenedor">
+              <form ACTION="https://formsubmit.co/ricardoimbaquinga@gmail.com" id="formulario" name="form2" METHOD="post">
+                <label for="nombre">Nombres:</label><br>
+                <input type="text" id="nombre" name="nombre"
+                  pattern="^[a-zA-Z]+(\s[a-zA-Z]+)?(\s[a-zA-Z]+)?(\s[a-zA-Z]+)?$"
+                  placeholder="Escribe uno o dos nombres" required><br><br>
+
+                <label for="telefono">Teléfono:</label><br>
+                <input type="text" id="telefono" name="telefono" pattern="[0-9]{10}" maxlength="10"
+                  placeholder="0981515127" required><br><br>
+
+                <label for="cedula">Cédula:</label><br>
+                <input type="text" id="cedula" name="cedula" pattern="[0-9]{10}" maxlength="10" placeholder="0981515127"
+                  required><br><br>
+
+                <label for="email">Dirección de Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="steven@example.com"
+                  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required><br><br>
+
+                <label for="mensaje">Mensaje</label><br>
+                <input type="text" id="mensaje" name="mensaje" required><br><br>
+
+                <center><input type="submit" value="Enviar">
+                  <input type="reset" value="Resetear">
+                </center>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORMULARIO DE CONTACTO-->
+    <div class="modal fade" id="myModalContacto" tabindex="-1" data-backdrop="static" data-keyboard="true"
+      aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel2">
+              <center><b>Contacto de whatsapp</b></center>
+            </h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div id="contenedor2">
+              <form method="POST" id="formulario2">
+                <label for="nombre">Nombres:</label><br>
+                <input type="text" id="nombre2" name="nombre"
+                  pattern="^[a-zA-Z]+(\s[a-zA-Z]+)?(\s[a-zA-Z]+)?(\s[a-zA-Z]+)?$"
+                  placeholder="Escribe uno o dos nombres" required><br><br>
+
+                <label for="telefono">Teléfono:</label><br>
+                <input type="text" id="telefono2" name="telefono" pattern="[0-9]{10}" maxlength="10"
+                  placeholder="0981515127" required><br><br>
+
+                <label for="mensaje">Mensaje</label><br>
+                <textarea id="mensaje2" name="mensaje" rows="4" required></textarea><br><br>
+
+                <center><input type="submit" value="Enviar">
+                  <input type="reset" value="Resetear">
+                </center>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARRUSEL PICHINCHA-->
+    <div class="modal fade" id="myModal3" tabindex="-1" data-backdrop="static" data-keyboard="true"
+      aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel3">Espacios de Edificio Andalucia</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <br>
+              <div id="theCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicadores -->
+                <ol class="carousel-indicators">
+                  <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#theCarousel" data-slide-to="1"></li>
+                  <li data-target="#theCarousel" data-slide-to="2"></li>
+
+                </ol>
+
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active" style=" height: 400px;">
+                    <img
+                      src="img/img_comprar/Pichincha/casa1_1_Quito.png"
+                      alt="Ilustracion" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Sala</h3>
+                      <p>Edificio Andalucia</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img
+                      src="img/img_comprar/Pichincha/casa1_2_Quito.png"
+                      alt="fotografia" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3> Jardin</h3>
+                      <p>Edificio Andalucia</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img src="img/img_comprar/Pichincha/casa1_3_Quito.png"
+                      alt="pintura" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Gimnasio</h3>
+                      <p>Edificio Andalucia</p>
+                    </div>
+                  </div>
+
+                  <a class="left carousel-control" href="#theCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">anterior</span>
+                  </a>
+                  <a class="right carousel-control" href="#theCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">siguiente</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- CARRUSEL GUAYAS-->
+    <div class="modal fade" id="myModal4" tabindex="-1" data-backdrop="static" data-keyboard="true"
+      aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel4">Santiago City - Urbanización Privada Ubicada en Daule - Casas Vis</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <br>
+              <div id="theCarousel2" class="carousel slide" data-ride="carousel">
+                <!-- Indicadores -->
+                <ol class="carousel-indicators">
+                  <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#theCarousel" data-slide-to="1"></li>
+                  <li data-target="#theCarousel" data-slide-to="2"></li>
+                  <li data-target="#theCarousel" data-slide-to="3"></li>
+
+                </ol>
+
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active" style=" height: 400px;">
+                    <img
+                      src="img/img_comprar/Guayas/casa2_1_Guayas.jpg"
+                      alt="Ilustracion" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Piscina</h3>
+                      <p>Santiago City - Urbanización Privada Ubicada en Daule - Casas Vis</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img
+                      src="img/img_comprar/Guayas/casa2_2_Guayas.jpg"
+                      alt="fotografia" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3> Jardin trasero</h3>
+                      <p>Santiago City - Urbanización Privada Ubicada en Daule - Casas Vis</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img src="img/img_comprar/Guayas/casa2_3_Guayas.jpg"
+                      alt="pintura" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Habitaciones</h3>
+                      <p>Santiago City - Urbanización Privada Ubicada en Daule - Casas Vis</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img src="img/img_comprar/Guayas/casa2_4_Guayas.jpg"
+                      alt="pintura" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Sala</h3>
+                      <p>Santiago City - Urbanización Privada Ubicada en Daule - Casas Vis</p>
+                    </div>
+                  </div>
+
+                  <a class="left carousel-control" href="#theCarousel2" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">anterior</span>
+                  </a>
+                  <a class="right carousel-control" href="#theCarousel2" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">siguiente</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARRUSEL GUAYAS 1-->
+    <div class="modal fade" id="myModal5" tabindex="-1" data-backdrop="static" data-keyboard="true"
+      aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel5">Condominio/Alícuota</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <br>
+              <div id="theCarousel3" class="carousel slide" data-ride="carousel">
+                <!-- Indicadores -->
+                <ol class="carousel-indicators">
+                  <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#theCarousel" data-slide-to="1"></li>
+                  <li data-target="#theCarousel" data-slide-to="2"></li>
+
+                </ol>
+
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active" style=" height: 400px;">
+                    <img
+                      src="img/img_comprar/Guayas/casa1_1_Guayas.jpg"
+                      alt="Ilustracion" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Sala </h3>
+                      <p>Condominio/Alícuota</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img
+                      src="img/img_comprar/Guayas/casa1_2_Guayas.jpg"
+                      alt="fotografia" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3> Cocina</h3>
+                      <p>Condominio/Alícuota</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img src="img/img_comprar/Guayas/casa1_3_Guayas.jpg"
+                      alt="pintura" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Baños</h3>
+                      <p>Condominio/Alícuota</p>
+                    </div>
+                  </div>
+
+                  <a class="left carousel-control" href="#theCarousel3" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">anterior</span>
+                  </a>
+                  <a class="right carousel-control" href="#theCarousel3" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">siguiente</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- CARRUSEL IMBABURA-->
+    <div class="modal fade" id="myModal6" tabindex="-1" data-backdrop="static" data-keyboard="true"
+      aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel6">Condominio/Alícuota</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <br>
+              <div id="theCarousel4" class="carousel slide" data-ride="carousel">
+                <!-- Indicadores -->
+                <ol class="carousel-indicators">
+                  <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#theCarousel" data-slide-to="1"></li>
+                  <li data-target="#theCarousel" data-slide-to="2"></li>
+                  <li data-target="#theCarousel" data-slide-to="3"></li>
+
+                </ol>
+
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active" style=" height: 400px;">
+                    <img
+                      src="img/img_comprar/Imbabura/casa1_1_Imbabura.png"
+                      alt="Ilustracion" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Sala </h3>
+                      <p>Condominio/Alícuota</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img
+                      src="img/img_comprar/Imbabura/casa1_2_Imbabura.png"
+                      alt="fotografia" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3> Sala 2</h3>
+                      <p>Condominio/Alícuota</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img src="img/img_comprar/Imbabura/casa1_3_Imbabura.png"
+                      alt="pintura" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Cocina</h3>
+                      <p>Condominio/Alícuota</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img src="img/img_comprar/Imbabura/casa1_4_Imbabura.png"
+                      alt="pintura" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Habitación</h3>
+                      <p>Condominio/Alícuota</p>
+                    </div>
+                  </div>
+
+                  <a class="left carousel-control" href="#theCarousel4" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">anterior</span>
+                  </a>
+                  <a class="right carousel-control" href="#theCarousel4" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">siguiente</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- CARRUSEL MANABÍ-->
+    <div class="modal fade" id="myModal7" tabindex="-1" data-backdrop="static" data-keyboard="true"
+      aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel6">Altos del Pacifico Club y Residences - Urbanización Privada en Manta -
+              Casas Vip</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <br>
+              <div id="theCarousel5" class="carousel slide" data-ride="carousel">
+                <!-- Indicadores -->
+                <ol class="carousel-indicators">
+                  <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#theCarousel" data-slide-to="1"></li>
+                  <li data-target="#theCarousel" data-slide-to="2"></li>
+                  <li data-target="#theCarousel" data-slide-to="3"></li>
+
+                </ol>
+
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active" style=" height: 400px;">
+                    <img
+                      src="img/img_comprar/Manabi/casa1_1_Manabi.png"
+                      alt="Ilustracion" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Sala </h3>
+                      <p>Altos del Pacifico Club y Residences - Urbanización Privada en Manta -
+                        Casas Vip</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img
+                      src="img/img_comprar/Manabi/casa1_2_Manabi.png"
+                      alt="fotografia" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3> Piscina</h3>
+                      <p>Altos del Pacifico Club y Residences - Urbanización Privada en Manta -
+                        Casas Vip</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img src="img/img_comprar/Manabi/casa1_3_Manabi.png"
+                      alt="pintura" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Baño convencional</h3>
+                      <p>Altos del Pacifico Club y Residences - Urbanización Privada en Manta -
+                        Casas Vip</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img src="img/img_comprar/Manabi/casa1_4_Manabi.png"
+                      alt="pintura" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Patio trasero</h3>
+                      <p>Altos del Pacifico Club y Residences - Urbanización Privada en Manta -
+                        Casas Vip</p>
+                    </div>
+                  </div>
+
+                  <a class="left carousel-control" href="#theCarousel5" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">anterior</span>
+                  </a>
+                  <a class="right carousel-control" href="#theCarousel5" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">siguiente</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+        <!-- CARRUSEL SANTA ELENA-->
+        <div class="modal fade" id="myModal8" tabindex="-1" data-backdrop="static" data-keyboard="true"
+        aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="myModalLabel6">Conjunto Residencial - Salinas Golf y Tenis</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                <br>
+                <div id="theCarousel6" class="carousel slide" data-ride="carousel">
+                  <!-- Indicadores -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#theCarousel" data-slide-to="1"></li>
+                    <li data-target="#theCarousel" data-slide-to="2"></li>
+                    <li data-target="#theCarousel" data-slide-to="3"></li>
+  
+                  </ol>
+  
+                  <div class="carousel-inner" role="listbox">
+                    <div class="item active" style=" height: 400px;">
+                      <img
+                        src="img/img_comprar/SantaElena/casa1_1_SE.png"
+                        alt="Ilustracion" class="carrusel_img" style="height: 300px;">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h3>Sala </h3>
+                        <p>Conjunto Residencial - Salinas Golf y Tenis</p>
+                      </div>
+                    </div>
+  
+                    <div class="item" style=" height: 400px;">
+                      <img
+                        src="img/img_comprar/SantaElena/casa1_2_SE.png"
+                        alt="fotografia" class="carrusel_img" style="height: 300px;">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h3> Cocina</h3>
+                        <p>Conjunto Residencial - Salinas Golf y Tenis</p>
+                      </div>
+                    </div>
+  
+                    <div class="item" style=" height: 400px;">
+                      <img src="img/img_comprar/SantaElena/casa1_3_SE.png"
+                        alt="pintura" class="carrusel_img" style="height: 300px;">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h3>Comedor</h3>
+                        <p>Conjunto Residencial - Salinas Golf y Tenis</p>
+                      </div>
+                    </div>
+  
+                    <div class="item" style=" height: 400px;">
+                      <img src="img/img_comprar/SantaElena/casa1_4_SE.png"
+                        alt="pintura" class="carrusel_img" style="height: 300px;">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h3>Habitación</h3>
+                        <p>Conjunto Residencial - Salinas Golf y Tenis</p>
+                      </div>
+                    </div>
+  
+                    <a class="left carousel-control" href="#theCarousel6" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">anterior</span>
+                    </a>
+                    <a class="right carousel-control" href="#theCarousel6" role="button" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">siguiente</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- CARRUSEL SANTO DOMINGO-->
+      <div class="modal fade" id="myModal9" tabindex="-1" data-backdrop="static" data-keyboard="true"
+      aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel6">Venta de Dos Casas en Plaza Asturias Sto. Domingo</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <br>
+              <div id="theCarousel7" class="carousel slide" data-ride="carousel">
+                <!-- Indicadores -->
+                <ol class="carousel-indicators">
+                  <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#theCarousel" data-slide-to="1"></li>
+                  <li data-target="#theCarousel" data-slide-to="2"></li>
+                  <li data-target="#theCarousel" data-slide-to="3"></li>
+
+                </ol>
+
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active" style=" height: 400px;">
+                    <img
+                      src="img/img_comprar/SantoDomingo/casa1_1_AD.png"
+                      alt="Ilustracion" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Segundo piso</h3>
+                      <p>Venta de Dos Casas en Plaza Asturias Sto. Domingo</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img
+                      src="img/img_comprar/SantoDomingo/casa1_2_AD.png"
+                      alt="fotografia" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3> Dormitorios</h3>
+                      <p>Venta de Dos Casas en Plaza Asturias Sto. Domingo</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img src="img/img_comprar/SantoDomingo/casa1_3_AD.png"
+                      alt="pintura" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Cocina</h3>
+                      <p>Venta de Dos Casas en Plaza Asturias Sto. Domingo</p>
+                    </div>
+                  </div>
+
+                  <div class="item" style=" height: 400px;">
+                    <img src="img/img_comprar/SantoDomingo/casa1_4_AD.png"
+                      alt="pintura" class="carrusel_img" style="height: 300px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Patio trasero</h3>
+                      <p>Venta de Dos Casas en Plaza Asturias Sto. Domingo</p>
+                    </div>
+                  </div>
+
+                  <a class="left carousel-control" href="#theCarousel7" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">anterior</span>
+                  </a>
+                  <a class="right carousel-control" href="#theCarousel7" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">siguiente</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENEDOR DE LA CASA COMPLETA-->
+
+    <div class="cont_info">
+      <!-- PICHINCHA -->
+      <div class="house-info">
+        <div class="cont_imgCasa"><img class="house-image" src="img/img_comprar/Pichincha/casa1_Quito.png"
+            alt="Imagen de la casa" class="btn btn-primary" data-toggle="modal" data-target="#myModal3"></div>
+        <div class="house-details">
+          <h3 class="titulos_casas" id="Pichincha">Edificio Andalucia</h3>
+          <div class="precios">
+            <p class="text_precios">Precios:</p>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="t_tabla">DESDE</td>
+                  <td class="t_tabla">HASTA</td>
+                </tr>
+                <tr>
+                  <td class="precio_tabla">USD 60.000</td>
+                  <td class="precio_tabla">USD 138.000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="cosas_casa">
+            <p class="text_espacios">Espacios:</p>
+            <div class="tipos_caracteristicas">Bodega</div>
+            <div class="tipos_caracteristicas">Jardin</div>
+            <div class="tipos_caracteristicas">Dos pisos</div>
+            <div class="tipos_caracteristicas">3 habitaciones</div>
+            <div class="tipos_caracteristicas">1 cocina</div>
+            <div class="tipos_caracteristicas">1 Sala</div>
+            <div class="tipos_caracteristicas">3 baños personales</div>
+          </div>
+          <div class="ubicacion">
+            <p class="text_ubicacion">Ubicación:</p>
+            <p>Tumbaco | Quito &nbsp;&nbsp;<a href="https://goo.gl/maps/SdEdhEkyYR8hPK4N7" target="new"><img
+                  class="img_ubicacion" src="img/img_comprar/ubicacion.png" alt="" /> </a></p>
+          </div>
+          <div class="contactos_compra">
+            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra" value="comprar">
+            <img class="img_contactosCompra" src="img/img_comprar/whatsapp.png" class="btn btn-primary"
+              data-toggle="modal" data-target="#myModalContacto" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- GUAYAS -->
+      <div class="house-info">
+        <div class="cont_imgCasa"><img class="house-image" src="img/img_comprar/Guayas/casa2_Guayas.jpg"
+            alt="Imagen de la casa" class="btn btn-primary" data-toggle="modal" data-target="#myModal4"></div>
+        <div class="house-details">
+          <h3 class="titulos_casas" id="Guayas">Santiago City - Urbanización Privada Ubicada en Daule - Casas Vis</h3>
+          <h3 class="titulos_casas"></h3>
+          <div class="precios">
+            <p class="text_precios">Precios:</p>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="t_tabla">DESDE</td>
+                  <td class="t_tabla">HASTA</td>
+                </tr>
+                <tr>
+                  <td class="precio_tabla">USD 80.000</td>
+                  <td class="precio_tabla">USD 100.000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="cosas_casa">
+            <p class="text_espacios">Espacios:</p>
+            <div class="tipos_caracteristicas">Bodega</div>
+            <div class="tipos_caracteristicas">Jardin trasero</div>
+            <div class="tipos_caracteristicas">Dos pisos</div>
+            <div class="tipos_caracteristicas">4 habitaciones</div>
+            <div class="tipos_caracteristicas">1 cocina</div>
+            <div class="tipos_caracteristicas">1 Sala</div>
+            <div class="tipos_caracteristicas">2 baños</div>
+          </div>
+          <div class="ubicacion">
+            <p class="text_ubicacion">Ubicación:</p>
+            <p>Km. 19.5 vía a Daule, Norte de Guayaquil, Guayaquil | Guayas&nbsp;&nbsp;<a
+                href="https://goo.gl/maps/1GtuArDJw4zWBYt8A" target="new"><img class="img_ubicacion"
+                  src="img/img_comprar/ubicacion.png" alt="" /> </a></p>
+          </div>
+          <div class="contactos_compra">
+            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra" value="comprar">
+            <img class="img_contactosCompra" src="img/img_comprar/whatsapp.png" class="btn btn-primary"
+              data-toggle="modal" data-target="#myModalContacto" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="house-info">
+        <div class="cont_imgCasa"><img class="house-image" src="img/img_comprar/Guayas/casa1_Guayas.jpg"
+            alt="Imagen de la casa" class="btn btn-primary" data-toggle="modal" data-target="#myModal5"></div>
+        <div class="house-details">
+          <h3 class="titulos_casas">Condominio/Alícuota</h3>
+          <div class="precios">
+            <p class="text_precios">Precios:</p>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="t_tabla">DESDE</td>
+                  <td class="t_tabla">HASTA</td>
+                </tr>
+                <tr>
+                  <td class="precio_tabla">USD 40.000</td>
+                  <td class="precio_tabla">USD 48.500</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="cosas_casa">
+            <p class="text_espacios">Espacios:</p>
+            <div class="tipos_caracteristicas">Bodega</div>
+            <div class="tipos_caracteristicas">Jardin trasero y delantero</div>
+            <div class="tipos_caracteristicas">Dos pisos</div>
+            <div class="tipos_caracteristicas">7 habitaciones</div>
+            <div class="tipos_caracteristicas">1 cocina</div>
+            <div class="tipos_caracteristicas">2 Salas</div>
+            <div class="tipos_caracteristicas">5 baños</div>
+          </div>
+          <div class="ubicacion">
+            <p class="text_ubicacion">Ubicación:</p>
+            <p>Durán | Guayas &nbsp;&nbsp;<a href="https://goo.gl/maps/nTHE8tAdTpXQqsWe7" target="new"><img
+                  class="img_ubicacion" src="img/img_comprar/ubicacion.png" alt="" /> </a></p>
+          </div>
+          <div class="contactos_compra">
+            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra" value="comprar">
+            <img class="img_contactosCompra" src="img/img_comprar/whatsapp.png" class="btn btn-primary"
+              data-toggle="modal" data-target="#myModalContacto" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- IMBABURA -->
+      <div class="house-info">
+        <div class="cont_imgCasa"><img class="house-image" src="img/img_comprar/Imbabura/casa1_imbabura.png"
+            alt="Imagen de la casa" class="btn btn-primary" data-toggle="modal" data-target="#myModal6"></div>
+        <div class="house-details">
+          <h3 class="titulos_casas" id="Imbabura">Condominio/Alícuota</h3>
+          <div class="precios">
+            <p class="text_precios">Precios:</p>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="t_tabla">DESDE</td>
+                  <td class="t_tabla">HASTA</td>
+                </tr>
+                <tr>
+                  <td class="precio_tabla">USD 160.000</td>
+                  <td class="precio_tabla">USD 200.000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="cosas_casa">
+            <p class="text_espacios">Espacios:</p>
+            <div class="tipos_caracteristicas">2 habitaciones</div>
+            <div class="tipos_caracteristicas">1 habitación con baño personal</div>
+            <div class="tipos_caracteristicas">1 cocina</div>
+            <div class="tipos_caracteristicas">2 Salas</div>
+            <div class="tipos_caracteristicas">1 baño</div>
+          </div>
+          <div class="ubicacion">
+            <p class="text_ubicacion">Ubicación:</p>
+            <p>31 de octubre , Norte de Otavalo | Otavalo &nbsp;&nbsp;<a href="https://goo.gl/maps/jyMxdvK9HCNMNv568"
+                target="new"><img class="img_ubicacion" src="img/img_comprar/ubicacion.png" alt="" /> </a></p>
+          </div>
+          <div class="contactos_compra">
+            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra" value="comprar">
+            <img class="img_contactosCompra" src="img/img_comprar/whatsapp.png" class="btn btn-primary"
+              data-toggle="modal" data-target="#myModalContacto" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- MANABI -->
+      <div class="house-info">
+        <div class="cont_imgCasa"><img class="house-image" src="img/img_comprar/Manabi/casa1_Manabi.png"
+            alt="Imagen de la casa" class="btn btn-primary" data-toggle="modal" data-target="#myModal7"></div>
+        <div class="house-details">
+          <h3 class="titulos_casas" id="Manabi">Altos del Pacifico Club y Residences - Urbanización Privada en Manta -
+            Casas Vip</h3>
+          <div class="precios">
+            <p class="text_precios">Precios:</p>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="t_tabla">DESDE</td>
+                  <td class="t_tabla">HASTA</td>
+                </tr>
+                <tr>
+                  <td class="precio_tabla">USD 70.000</td>
+                  <td class="precio_tabla">USD 80.000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="cosas_casa">
+            <p class="text_espacios">Espacios:</p>
+            <div class="tipos_caracteristicas">Jardin delantero y tarsero</div>
+            <div class="tipos_caracteristicas">Dos pisos</div>
+            <div class="tipos_caracteristicas">3 habitaciones</div>
+            <div class="tipos_caracteristicas">1 cocina</div>
+            <div class="tipos_caracteristicas">1 Salas</div>
+            <div class="tipos_caracteristicas">1 baño</div>
+            <div class="tipos_caracteristicas">piscina</div>
+          </div>
+          <div class="ubicacion">
+            <p class="text_ubicacion">Ubicación:</p>
+            <p>Vía Circunvalación Tramo 2, Ruta del Spondylus, Centro de Manta, Manta | Manabí &nbsp;&nbsp;<a
+                href="https://goo.gl/maps/vJsDWzpXcm5yiUZY8" target="new"><img class="img_ubicacion"
+                  src="img/img_comprar/ubicacion.png" alt="" /> </a></p>
+          </div>
+          <div class="contactos_compra">
+            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra" value="comprar">
+            <img class="img_contactosCompra" src="img/img_comprar/whatsapp.png" class="btn btn-primary"
+              data-toggle="modal" data-target="#myModalContacto" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- SANTA ELENA -->
+      <div class="house-info">
+        <div class="cont_imgCasa"><img class="house-image" src="img/img_comprar/SantaElena/casa1_SE.jpg"
+            alt="Imagen de la casa" class="btn btn-primary" data-toggle="modal" data-target="#myModal8"></div>
+        <div class="house-details">
+          <h3 class="titulos_casas" id="SantaElena">Conjunto Residencial - Salinas Golf y Tenis</h3>
+          <div class="precios">
+            <p class="text_precios">Precios:</p>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="t_tabla">DESDE</td>
+                  <td class="t_tabla">HASTA</td>
+                </tr>
+                <tr>
+                  <td class="precio_tabla">USD 120.000</td>
+                  <td class="precio_tabla">USD 126.000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="cosas_casa">
+            <p class="text_espacios">Espacios:</p>
+            <div class="tipos_caracteristicas">Jardin trasero</div>
+            <div class="tipos_caracteristicas">1 piso</div>
+            <div class="tipos_caracteristicas">4 habitaciones</div>
+            <div class="tipos_caracteristicas">1 cocina</div>
+            <div class="tipos_caracteristicas">1 Sala</div>
+            <div class="tipos_caracteristicas">1 baño general</div>
+            <div class="tipos_caracteristicas">Gomedor</div>
+          </div>
+          <div class="ubicacion">
+            <p class="text_ubicacion">Ubicación:</p>
+            <p>Av. 22 de diciembre y Quito, Malecón de Salinas, Salinas | Santa Elena &nbsp;&nbsp;<a
+                href="https://goo.gl/maps/b7QsqiXj5UfTTvF68" target="new"><img class="img_ubicacion"
+                  src="img/img_comprar/ubicacion.png" alt="" /> </a></p>
+          </div>
+          <div class="contactos_compra">
+            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra" value="comprar">
+            <img class="img_contactosCompra" src="img/img_comprar/whatsapp.png" class="btn btn-primary"
+              data-toggle="modal" data-target="#myModalContacto" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- SANTO DOMINGO -->
+      <div class="house-info">
+        <div class="cont_imgCasa"><img class="house-image" src="img/img_comprar/SantoDomingo/casa1_AD.png"
+            alt="Imagen de la casa" class="btn btn-primary" data-toggle="modal" data-target="#myModal9"></div>
+        <div class="house-details">
+          <h3 class="titulos_casas" id="SantoDomingo">Venta de Dos Casas en Plaza Asturias Sto. Domingo</h3>
+          <div class="precios">
+            <p class="text_precios">Precios:</p>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="t_tabla">DESDE</td>
+                  <td class="t_tabla">HASTA</td>
+                </tr>
+                <tr>
+                  <td class="precio_tabla">USD 70.000</td>
+                  <td class="precio_tabla">USD 78.000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="cosas_casa">
+            <p class="text_espacios">Espacios:</p>
+            <div class="tipos_caracteristicas">Jardin delantero y trasero</div>
+            <div class="tipos_caracteristicas">Dos pisos</div>
+            <div class="tipos_caracteristicas">5 habitaciones</div>
+            <div class="tipos_caracteristicas">2 habitación con baño personal</div>
+            <div class="tipos_caracteristicas">1 cocina</div>
+            <div class="tipos_caracteristicas">1 Salas</div>
+            <div class="tipos_caracteristicas">1 baño</div>
+          </div>
+          <div class="ubicacion">
+            <p class="text_ubicacion">Ubicación:</p>
+            <p>Av. De las américas, Norte de Santo Domingo | Santo Domingo&nbsp;&nbsp;<a
+                href="https://goo.gl/maps/MY5udV82Daxr8uj66" target="new"><img class="img_ubicacion"
+                  src="img/img_comprar/ubicacion.png" alt="" /> </a></p>
+          </div>
+          <div class="contactos_compra">
+            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra" value="comprar">
+            <img class="img_contactosCompra" src="img/img_comprar/whatsapp.png" class="btn btn-primary"
+              data-toggle="modal" data-target="#myModalContacto" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

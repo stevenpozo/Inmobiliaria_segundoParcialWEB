@@ -1,0 +1,223 @@
+@charset "utf-8";
+/* CSS Document */
+
+.div1{
+	color: #6E2C00 ;
+	font-family: Lato,sans-serif;
+	box-sizing: border-box;  
+	text-transform: uppercase; 
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.div2{	
+	font-family: Lato,sans-serif;
+	box-sizing: border-box;  
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.div4{
+	font-family: Lato,sans-serif;
+	box-sizing: border-box;  
+	padding-bottom: 20px;
+	overflow-x: auto;
+}
+
+td,th{
+	padding: 25px
+}
+
+.div5{
+		color: #6E2C00 ;
+	font-family: Lato,sans-serif;
+	box-sizing: border-box;  
+	text-transform: uppercase; 
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.div6{
+	font-family: Lato,sans-serif;
+	box-sizing: border-box;  
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+/*Seccion de información de las casas*/
+.div7, .div8 , .div9{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+	padding: 10px 30px;
+	background-color: rgba(188,202,228,0.70);
+	backdrop-filter: blur(10px); /*hacerlo borroso al background*/
+	border-radius: 50px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*Seccion de información de las casas*/
+.cont_info{
+	padding: 10px;
+	width: 100%;
+}
+
+/*formato de imagenes*/
+.house-image {
+    width: 250px;
+    height: 200px;
+    margin-right: 20px;
+    border-radius: 20px;
+    transition: transform 0.3s;
+}
+
+/*animación de zoom en imagenes de casas*/
+.house-image:hover {
+    transform: scale(1.08);
+}
+
+.house-details {
+    flex-grow: 1;
+}
+
+
+
+
+
+/*formato de tablas precios*/
+table td {
+    padding: 10px 10px 0px 30px;
+    border: none;
+}
+tr {
+    width: 100px;
+}
+.t_tabla {
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #722620;
+}
+
+
+/*formato de los espacios*/
+.tipos_caracteristicas {
+    border: 2px solid #990235;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.cosas_casa, .ubicacion, .precios, .contactos_compra{
+    padding-left: 30px;
+}
+.text_espacios, .text_ubicacion, .text_precios {
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+    color: #990235;
+}
+
+
+/*imagen de contactos*/
+.img_ubicacion{
+	width: 20px;
+	height: 20px;
+	transition: transform 0.3s;
+}
+
+.img_ubicacion:hover{
+	transform: scale(1.5);
+}
+
+
+
+.example {
+	padding: 20px;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .example {font-size: 30px; }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {font-size: 50px; }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example {}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {font-size: 50px;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {}
+}
+
+.example2 {
+	padding: 20px;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .example2 {font-size: 10px; }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example2 {font-size: 15px; }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example2 {}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example2 {font-size: 25px;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example2 {}
+}
+
+.example3 {
+	padding: 20px;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .example3 {font-size: 10px; }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example3 {font-size: 15px; }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example3 {}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example3 {font-size: 25px;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example3 {}
+}

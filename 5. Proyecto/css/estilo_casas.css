@@ -1,0 +1,387 @@
+@charset "utf-8";
+body {
+  font-family: Arial, sans-serif;
+}
+
+/*Cotenido principal*/
+#container {
+  display: flex;
+  flex-direction: row;
+}
+
+/*Menú lateral*/
+#sidebar {
+  width: 200px;
+  padding: 20px;
+}
+#sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+#sidebar li {
+  background-color: rgba(240, 240, 240, 0.0);
+  border: 2px solid rgba(188, 202, 228, 0.70);
+  backdrop-filter: blur(2px);
+  border-radius: 30px;
+  margin: 2px;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 12px;
+  border-width: 100%;
+  color: black;
+}
+li {
+  transition: transform 0.3s;
+}
+li:hover {
+  transform: scale(1.08);
+}
+#sidebar, a {
+  color: black;
+  text-decoration: none;
+}
+#sidebar ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+
+/*Seccion de información de las casas*/
+.house-info {
+  background-color:  rgba(188, 202, 228, 0.70);
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  width: auto;
+  height: auto;
+}
+.cont_info {
+  padding: 10px;
+  width: 100%;
+}
+
+h3{
+  text-align: left;
+}
+/*formato de imagenes*/
+.house-image {
+  width: 100%;
+  height: 450px;
+  margin-right: 20px;
+  border-radius: 20px;
+  transition: transform 0.3s;
+}
+.cont_imgCasa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 100%;
+}
+/*animación de zoom en imagenes de casas*/
+.house-image:hover, input[type="button"]:hover {
+  transform: scale(1.03);
+}
+.house-details {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  flex-grow: 1;
+  width: 50%;
+  flex-direction: row;
+  font-size: 30px;
+}
+
+.house-details p{
+  text-align: left;
+  font-size: medium;
+}
+
+.house-details h3{
+  font-size: 20px;
+}
+/*formato de tablas precios*/
+table td {
+  padding: 10px 10px 0px 30px;
+  border: none;
+}
+tr {
+  width: 100px;
+}
+.t_tabla {
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #722620;
+}
+/*formato de los espacios*/
+.tipos_caracteristicas {
+  border: 2px solid #990235;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.cosas_casa, .ubicacion, .precios, .contactos_compra {
+  padding-left: 30px;
+}
+.text_espacios, .text_ubicacion, .text_precios {
+  text-align: left;
+  font-size: 12px;
+  font-weight: bold;
+  color: #990235;
+}
+/*imagenes de contactos*/
+.img_contactosCompra {
+  float: right;
+  margin-right: 30px;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+input[type="button"] {
+  float: right;
+  margin-right: 30px;
+  background-color: rgba(108, 7, 41, 1.00);
+  backdrop-filter: blur(2px);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+/*imagen de contactos*/
+.img_ubicacion {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s;
+}
+.img_ubicacion:hover, .img_contactosCompra:hover {
+  transform: scale(1.5);
+}
+
+
+
+/*RESPONSIVE*/
+
+/*960px*/
+@media (max-width: 960px) {
+  .house-info {
+    flex-direction: row;
+  }
+  .house-image {
+    max-width: auto;
+    max-height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #container {
+    flex-direction: column;
+  }
+  #sidebar {
+    padding: 10px 180px;
+    text-align: center;
+    width: auto;
+  }
+  #sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 40px;
+    display: inline-flex;
+    flex-direction: column;
+  }
+  .cont_imgCasa{
+    width: 910px;
+  }
+
+  .house-details{
+    width: 910px;
+  }
+  h3{
+    text-align: center;
+  }
+}
+
+
+/*700px*/
+@media (max-width: 700px) {
+  .house-info {
+    flex-direction: column;
+  }
+  .house-image {
+    max-width: 500px;
+    max-height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #container {
+    flex-direction: column;
+  }
+  #sidebar {
+    padding: 10px 180px;
+    width: auto;
+  }
+  #sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: -webkit-sticky;
+    text-align: center;
+    position: sticky;
+    top: 40px;
+    display: inline-flex;
+    flex-direction: column;
+  }
+  .cont_imgCasa{
+    max-width: 550px;
+  }
+
+  .house-details{
+    max-width: 550px;
+  }
+  h3{
+    text-align: center;
+  }
+}
+
+/*650*/
+@media (max-width: 650px) {
+  .house-image {
+    max-width: 560px;
+    max-height: 560px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #sidebar {
+    padding: 10px 150px;
+    width: auto;
+  }
+  .cont_imgCasa{
+    width: 610px;
+  }
+
+  .house-details{
+    width: 610px;
+  }
+  h3{
+    text-align: center;
+  }
+}
+
+/*iphone*/
+@media (max-width: 560px) {
+  .house-image {
+    max-width: 460px;
+    max-height: 4600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #sidebar {
+    padding: 10px 150px;
+    width: auto;
+  }
+  .cont_imgCasa{
+    width: 510px;
+  }
+
+  .house-details{
+    width: 510px;
+  }
+  h3{
+    text-align: center;
+  }
+}
+
+/*iphone*/
+@media (max-width: 420px) {
+  .house-image {
+    max-width: 300px;
+    max-height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #sidebar {
+    padding: 10px 150px;
+    width: auto;
+  }
+  .cont_imgCasa{
+    width: 350px;
+  }
+
+  .house-details{
+    width: 350px;
+  }
+  h3{
+    text-align: center;
+  }
+}
+
+/*Galaxy Bold*/
+@media (max-width: 370px) {
+  .house-image {
+    max-width: 300px;
+    max-height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #sidebar {
+    padding: 10px 100px;
+    width: auto;
+    text-align: center;
+  }
+  .cont_imgCasa{
+    width: 320px;
+  }
+
+  .house-details{
+    width: 320px;
+  }
+}
+
+/*280*/
+@media (max-width: 280px) {
+  .house-image {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #sidebar {
+    padding: 10px 100px;
+    width: auto;
+  }
+  .cont_imgCasa{
+    width: 220px;
+  }
+
+  .house-details{
+    width: 220px;
+  }
+  h3{
+    text-align: center;
+  }
+}
+
+
+

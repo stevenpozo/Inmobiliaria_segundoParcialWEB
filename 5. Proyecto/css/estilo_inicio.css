@@ -1,0 +1,427 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+    margin: 0;
+    padding: 25px;
+    font-family: Arial, sans-serif;
+	width: 100%;
+	height: 25%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* Barra de busqueda*/
+.container{
+	position: absolute;
+	left: 48%;
+	top: 45%;
+	transform: translate(-50%,-50%);
+	padding: 10px;
+}
+input{
+	outline: none;
+	box-sizing: border-box;
+	height: 60px;
+	width: 0;
+	padding: 0 20px;
+	color: rgba(18,68,160,0.70) ;
+	border-radius: 50px;
+	font-size: 20px;
+	border: 1px solid black;
+	transition: all .7s ease;
+}
+::placeholder{
+	color:rgba(18,68,160,0.70);
+}
+.btn{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 80px;
+	height: 80px;
+	background-color: rgba(250, 128, 114,.96);
+	line-height: 80px;
+	border-radius: 50%;
+	text-align: center;
+	cursor: pointer;
+	transition: .5s;
+}
+.btn i{
+	font-size: 25px;
+	color:black;
+	line-height: 80px;
+	transition: all .7s ease;
+}
+.container:hover input{
+	width: 350px;
+}
+.container:hover i{
+	transform: rotate(-360deg);
+}
+.btn:hover{
+	background: rgba(18,68,160,0.70) ;
+}
+/*Cuerpo*/
+header{
+	width: 100%;
+	background: linear-gradient(to left, rgba(250, 128, 114,0.70), rgba(18,68,160,0.70) );
+	backdrop-filter: blur(10px); /*hacerlo borroso al background*/
+	height: 70px;
+	position:fixed;
+}
+.ancho{				/*Es el ancho del menu principal */
+	width: 80%;
+	height: 70px;
+	/*background: red;*/
+	margin: auto;
+}
+.logo{				/*Creamos la cajita del logo*/
+	width: 30%;
+	height: 70px;
+	/*background: blue;*/
+	float: left;	
+	padding-top: 10px;			/*Desplaza 10px*/
+	box-sizing: border-box;   	/*Ocupa el ancho del contenedor*/	
+}
+.logo p a{
+	color: #fff;
+	font-size: 40px;
+	text-decoration:none;
+	font-weight: bold;			/*Transformar en negrita*/
+	/*font-family: fantasy; */   /*Fuente*/
+}
+nav{
+	width: 70%;
+	height: 70px;
+	/*background: olive;*/
+	float: left;
+	text-align: right;
+	padding-top: 24px;
+	box-sizing: border-box; 
+}
+nav ul li{
+	display: inline;		/*Que se muestre de forma lineal*/
+}
+nav ul li a{
+	color: aliceblue;
+	font-size: 14px;
+	text-decoration:none;	/*Quita la decoracion o el subdrayado*/
+	text-transform: uppercase;    /*Pone a todas en Mayusculas */
+	padding-left: 15px; 		/*Espacio de las palabras*/
+	font-weight: bold;			/*Letras en negritas*/
+	letter-spacing: 1px;		/*espacio entre letras*/
+}
+nav ul li a:hover{			/* Para que el mouse pase por las letras se vean de otro color*/
+	color:#444;
+}
+
+
+/*Cuerpo*/
+.contenedor{
+	width: 100%;
+	margin: auto;
+	margin-bottom: 70px;
+	
+	
+}
+.columnax4 {
+	width: 25%;
+	float: left;
+	padding: 2% 3%;
+	box-sizing: border-box;
+}
+.columnax4 img{
+	width: 20%;
+	height: 20%;
+	display:block;
+	margin:auto;
+}
+h1,h2,h4,h5, h6{
+	text-transform:uppercase;
+	color: #2D2D2D;
+	font-family: rale;
+	letter-spacing: 1px;
+}
+h4{
+	margin-top: 1%;
+	font-size: 20px;
+	text-align: center;
+	padding: 15px;
+}
+h5{
+	font-family: Lato,sans-serif;
+	line-height: 1.5;
+	font-weight: normal;
+	padding: 10px 0;
+	font-size: 12px;	
+}
+p{
+	color:#212121;
+	font-family: Lato,sans-serif;
+	font-size: 20px;
+	text-align: center;
+	padding-bottom: 20px;
+}
+.banner{
+	background: url("../img/5d.jpg");
+	float: left;
+	width: 100%;
+	height: 200px;
+	margin-top: 50px;
+	text-align: center;
+	background-repeat: no-repeat; 
+	background-size: cover; /*Imagen al 100% del ancho*/
+	background-attachment: fixed; /*Posicion fija para la imagen*/
+}
+.banner h2{
+	background: rgba(0,0,0,.8);
+	color: #fff;
+	font-size: 22px;
+	height: 100%;
+	box-sizing: border-box;  
+	padding-top: 6%;
+}
+
+.tabla{
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	padding-top: 50px;
+}
+.tablax4{
+	float: left;
+	width: 25%;
+	margin-top: 20px;
+}
+.caja-precio{
+	border: 1px solid #5c6552;
+	background: #30353c;
+}
+
+
+/*Texto */
+.intro h3{
+	color: #6E2C00 ;
+	font-size: 32px;
+	font-family: Lato,sans-serif;
+	box-sizing: border-box;  
+	letter-spacing: 1px;
+	text-transform: uppercase; 
+	padding-bottom: 20px;
+	text-align: center;
+	padding: 50px;
+}
+#principal h3{
+	color: #6E2C00 ;
+	font-size: 32px;
+	font-family: Lato,sans-serif;
+	box-sizing: border-box;  
+	letter-spacing: 1px;
+	text-transform: uppercase; 
+	padding-bottom: 20px;
+	text-align: center;
+	padding: 50px;
+}
+.intro p{
+	color:#212121;
+	font-family: Lato,sans-serif;
+	font-size: 29px;
+	text-align: center;
+	padding-bottom: 20px;
+	box-sizing: border-box; 
+	letter-spacing: 1px;
+	padding: 20px 80px;
+}
+
+/* Pie de pagina*/
+
+.Pie{
+	width: 100%;
+	height: 220px;
+	background: linear-gradient(to left, rgba(250, 128, 114,0.70), rgba(18,68,160,0.70) );
+	clear:both;
+	box-sizing: border-box;
+	padding-bottom: 10%;
+	text-align: left;
+	
+}
+.columnax3 {
+	width: 33.33%;
+	float: left;
+	padding: 20px 20px;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.columnax3 h4,a{
+	color:#17202A;
+}
+
+
+.Slider-box{
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+    overflow:hidden;
+}
+
+.Slider-box ul{
+    display: flex;
+    padding: 0;
+    width: 500%;
+    animation: slide 20s infinite alternate ease-in-out;
+}
+
+.Slider-box li{
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+/*
+.texto{
+    position: absolute;
+    text-align: center;
+    padding: 0 250px;
+    top: 250px;
+    color: #252525;
+}
+.texto h2{
+    font-size: 45px;
+    margin-bottom: 35px;
+}
+.Slider-box img{
+    width: 100%;
+}*/
+@keyframes slide{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+img{
+	width: 100%;
+	height: 100%;
+}
+
+.red{
+	position: fixed;
+	top: 200px;
+	z-index: 100;
+	left: 0;
+}
+#facebook a{
+	background: #3b5998;
+	padding: 10px 20px;
+	color:#fff;
+	text-decoration: none;
+	width: 50px;
+	transition: all .4s ease;  /*que sea lento y despues mas rapido */
+}
+#facebook a:hover{
+	background: #000;
+	padding: 10px 40px;
+}
+#youtuve a{
+	background-color: #bb0000;
+	padding: 10px 20px;
+	color:#fff;
+	text-decoration: none;
+	width: 50px;
+	transition: all .4s ease;
+}
+#youtuve a:hover{
+	background: #000;
+	padding: 10px 40px;
+}
+#twitter a{
+	background-color: #55acee;
+	padding: 10px 20px;
+	color:#fff;
+	text-decoration: none;
+	width: 50px;
+	transition: all .4s ease;
+}
+#twitter a:hover{
+	background: #000;
+	padding: 10px 40px;
+}
+#instagram a{
+	background-color: #3f729b;
+	padding: 10px 20px;
+	color:#fff;
+	text-decoration: none;
+	width: 50px;
+	transition: all .4s ease;
+}
+#instagram a:hover{
+	background: #000;
+	padding: 10px 40px;
+}
+#facebook1 a{
+	padding: 10px 20px;
+	color:#3b5998;
+	text-decoration: none;
+	width: 25%;
+	font-size: 30px;
+	float: left;
+	box-sizing: border-box;
+}
+#twitter1 a{
+	padding: 10px 20px;
+	color:#55acee;
+	text-decoration: none;
+	width: 25%;
+	font-size: 30px;
+	float: left;
+	box-sizing: border-box;
+}
+#youtuve1 a{
+	padding: 10px 20px;
+	color:#bb0000;
+	text-decoration: none;
+	width: 25%;
+	font-size: 30px;
+	float: left;
+	box-sizing: border-box;
+}
+#instagram1 a{
+	padding: 10px 20px;
+	color:#3f729b;
+	text-decoration: none;
+	width: 25%;
+	font-size: 30px;
+	float: left;
+	box-sizing: border-box;
+}
+.derec{
+	background: linear-gradient(to left, rgba(250, 128, 114,0.70), rgba(18,68,160,0.70) );
+	width: 100%;
+	height: 60px;
+	box-sizing: border-box; 
+	
+}
+.derec p{
+	background: rgba(0,0,0,.3);
+	color:#2E2E2E;
+	font-size: 12px;
+	height: 100%;
+	box-sizing: border-box;  
+	padding-top: 1%;
+	text-align: left;
+	padding: 15px;
+	text-align: center;
+}
