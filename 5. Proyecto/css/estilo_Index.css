@@ -113,6 +113,10 @@ nav{
 	
 
 }
+
+nav li {
+	text-align: left;
+}
 nav ul li{
 	display: inline;		/*Que se muestre de forma lineal*/
 }
