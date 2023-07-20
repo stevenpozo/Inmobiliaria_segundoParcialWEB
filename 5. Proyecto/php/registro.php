@@ -27,6 +27,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Cierra el archivo
     fclose($file);
 
-    echo "Registro exitoso. <a href='../html/Login.html'>Iniciar sesión</a>";
+    echo "Registro exitoso.";
 }
 ?>
