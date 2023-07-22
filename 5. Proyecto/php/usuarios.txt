@@ -1,7 +1,2 @@
 steven:1753368099:stevenpozo0999@gmail.com
-kevin:1234:kguzman1@espe.edu.ec
-
-veariasp:1234:sjpozo1@espe.edu.ec
-gee:ddd:german@ddd
-ssss:wsdcwdc:hola@nose
-sss22:2222:2222@ss
+german:germanpozo:germanpozo1999@gmail

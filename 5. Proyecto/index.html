@@ -4,9 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>SweetHouse </title>
-	<link href="css/estilo_Index.css" type="text/css" rel="stylesheet">
-	<link rel="stylesheet" href="css/responsive.css">
-	<link rel="icon" href="/img/img/log1.png" type="image/png">
+	<link rel="icon" href="img/img/log1.png" type="image/png">
 	<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0">
 
 	<script src="https://kit.fontawesome.com/03a9c1f07d.js" crossorigin="anonymous"></script>
@@ -25,12 +23,14 @@
 		integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
 		crossorigin="anonymous"></script>
 
+
 	<link href="css/estilo_LoginYRegistro.css" type="text/css" rel="stylesheet">
 	<link href="css/estilo_login.css" type="text/css" rel="stylesheet">
 	<link href="css/estilo_casas.css" type="text/css" rel="stylesheet">
 	<link href="css/estilo.css" type="text/css" rel="stylesheet">
 	<link href="css/Contacos.css" rel="stylesheet" type="text/css">
 	<link href="css/estilo_Informacion.css" rel="stylesheet" type="text/css">
+	<link href="css/estilo_Index.css" type="text/css" rel="stylesheet">
 
 </head>
 
@@ -40,7 +40,7 @@
 	<div class="modal fade" id="myModal1" tabindex="-1" data-backdrop="static" data-keyboard="true"
 		aria-labelledby="myModalLabel">
 		<div class="modal-dialog modal-lg modal-dialog-centered modal-top">
-			<div class="modal-content">
+			<div class="modal-content" style="border-radius: 0px;">
 				<div class="modal-header">
 					<h4 class="modal-title" id="myModalLabel">
 					</h4>
@@ -124,53 +124,58 @@
 		<div id="youtuve"><a href="https://www.youtube.com/@century21eliteecuador44" target="none"
 				class="fa-brands fa-youtube"></a></div>
 	</div>
-	<header>
-		<div class="ancho">
-			<div class="logo">
-				<p><a href="index.html">SweetHouse</a></p>
-			</div>
-			<div class="item">
-				<nav id="menu">
-					<ul>
-						<li style="margin-left: 10px;"><a href="#">Venta</a>
-							<ul class="menu1">
-								<li><a href="#" onclick="cargarDepa()"
-										style="font-size: 15px; color: aliceblue; font-weight: lighter;">Departamentos</a>
-								</li>
-								<li><a href="#" onclick="cargarCasas()"
-										style="font-size: 15px; color: aliceblue; font-weight: lighter;">Casas</a></li>
-								<li><a href="#" onclick="cargarTerreno()"
-										style="font-size: 15px; color: aliceblue; font-weight: lighter;">Terrenos</a>
-								</li>
-							</ul>
+
+
+	<nav class="menu">
+		<section class="menu__container">
+			<h1 class="menu__logo">SweetHouse</h1>
+
+			<ul class="menu__links">
+				<li class="menu__item">
+					<a href="#" class="menu__link" onclick="cargarInicio()">Inicio</a>
+				</li>
+
+				<li class="menu__item menu__item--show">
+					<a href="#" class="menu__link">Venta <img src="img/arrow.svg" class="menu__arrow"></a>
+
+					<ul class="menu__nesting">
+						<li class="menu__inside">
+							<a href="#" class="menu__link menu__link--inside" onclick="cargarCasas()">Casas</a>
 						</li>
-						<li style="margin-left: 10px;"><a href="#">Alquiler</a>
-							<ul class="menu1">
-								<li><a href="#" onclick="cargarAlquiler()"
-										style="font-size: 15px; color: aliceblue; font-weight: lighter;">Departamentos</a>
-								</li>
-							</ul>
+						<li class="menu__inside">
+							<a href="#" class="menu__link menu__link--inside" onclick="cargarDepa()">Departamentos</a>
 						</li>
-						<li class="menu1"><a href="#"><i class="fa-solid fa-bars fa-bounce fa-xl"></i></a>
-							<ul>
-								<li><a href="#" onclick="cargarSomos()"
-										style="font-size: 15px; color: aliceblue; font-weight: lighter;">Sobre
-										nosotros</a></li>
-								<li><a href="#" onclick="cargarContactos()"
-										style="font-size: 15px; color: aliceblue; font-weight: lighter;">Contactos</a>
-								</li>
-								<li><a href="#" onclick="cargarInicio()"
-										style="font-size: 15px; color: aliceblue; font-weight: lighter;">Inicio</a></li>
-							</ul>
-						</li>
-						<li><a id="iniciar_sesion" class="btn btn-primary" data-toggle="modal" data-target="#myModal"
-								style="color: white">Acceder</a>
+						<li class="menu__inside">
+							<a href="#" class="menu__link menu__link--inside" onclick="cargarTerreno()">Terrenos</a>
 						</li>
 					</ul>
-				</nav>
+				</li>
+
+				<li class="menu__item  menu__item--show">
+					<a href="#" class="menu__link">Alquiler <img src="img/arrow.svg" class="menu__arrow"></a>
+
+					<ul class="menu__nesting">
+						<li class="menu__inside">
+							<a href="#" class="menu__link menu__link--inside"
+								onclick="cargarAlquiler()">Departamentos</a>
+						</li>
+					</ul>
+				</li>
+
+				<li class="menu__item">
+					<a id="iniciar_sesion" class="btn btn-primary menu__link" data-toggle="modal" data-target="#myModal"
+						style="color: white">Acceder</a>
+				</li>
+
+			</ul>
+
+			<div class="menu__hamburguer">
+				<img src="img/menu.svg" class="menu__img">
 			</div>
-		</div>
-	</header>
+		</section>
+
+
+	</nav>
 
 	<div class="Slider-box">
 		<ul>
@@ -209,13 +214,14 @@
 			<h3>Encuentra la casa perfecta para tu familia</h3>
 			<hr>
 			<div class="media">
-				<p>Nuestro objetivo es brindarte un servicio transparente y satisfactorio, proporcionándote información
+				<p>Nuestro objetivo es brindarte un servicio transparente y satisfactorio, proporcionándote
+					información
 					clara sobre precios, condiciones de venta y detalles legales de cada propiedad. Nuestro amable
 					equipo está listo para ayudarte y responder a todas tus preguntas. Tu satisfacción es nuestra
 					prioridad mientras te acompañamos en la emocionante búsqueda de tu hogar ideal.</p>
 			</div>
 			<div class="media">
-				<iframe width="100%" height="100px" src="https://www.youtube.com/embed/uXOuc_OZt9E?controls=0"
+				<iframe class="video" src="https://www.youtube.com/embed/uXOuc_OZt9E?controls=0"
 					title="YouTube video player" frameborder="0"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 					allowfullscreen></iframe>
@@ -235,25 +241,29 @@
 			<div class="columnax4">
 				<img src="img/img/gestion-del-tiempo.png" alt="">
 				<h4>Tienes tu propia sección</h4>
-				<p> Accede de forma fácil y segura a los avisos contactados, favoritos, las notas que creaste y más.</p>
+				<p> Accede de forma fácil y segura a los avisos contactados, favoritos, las notas que creaste y más.
+				</p>
 			</div>
 			<div class="columnax4">
 				<img src="img/img/prestamo.png" alt="">
 				<h4>Variedad de anunciantes</h4>
-				<p>Inmobiliarias y dueños directos de todo el país ofrecen las mejores opciones de inmuebles para ti.
+				<p>Inmobiliarias y dueños directos de todo el país ofrecen las mejores opciones de inmuebles para
+					ti.
 				</p>
 			</div>
 			<div class="columnax4">
 				<img src="img/img/medalla.png" alt="">
 				<h4>¡Somos SweetHouse!</h4>
-				<p>12 años en el mercado y 1.2 millones de avisos publicados nos respaldan en la búsqueda de tu hogar.
+				<p>12 años en el mercado y 1.2 millones de avisos publicados nos respaldan en la búsqueda de tu
+					hogar.
 				</p>
 			</div>
 		</div>
 
 
 		<div class="title1">
-			<h4 id="tem">Adéntrate en la belleza y la inspiración de nuestros diseños de interiores, donde cada detalle
+			<h4 id="tem">Adéntrate en la belleza y la inspiración de nuestros diseños de interiores, donde cada
+				detalle
 				está
 				cuidadosamente creado para hacer de tu hogar un lugar excepcional.</h4>
 		</div>
@@ -291,39 +301,39 @@
 
 	</div>
 
-	<div class="pie">
-		<div class="grupo1">
-			<div class="columnax3">
-				<img src="img/img/log1.png" alt="logo_SeetHouse"></a>
+		<div class="pie">
+			<div class="grupo1">
+				<div class="columnax3">
+					<img src="img/img/log1.png" alt="logo_SeetHouse"></a>
+				</div>
+				<div class="columnax3">
+					<i class="fa-solid fa-city">
+						Inmobiliaria
+					</i>
+					<a href="#" onclick="cargarSomos()"><br><br>¿Quiénes somos?</a><br>
+					<a href="#" onclick="cargarContactos()">Contactos</a><br>
+				</div>
+				<div class="columnax3">
+					<i class="fa-solid fa-house">SweetHouse</i>
+					<a href="#" onclick="cargarCasas()"><br><br>Casas de venta</a><br>
+					<a href="#" onclick="cargarDepa()">Departamentos de venta</a><br>
+					<a href="#" onclick="cargarAlquiler()">Departamentos de alquiler</a><br>
+					<a href="#" onclick="cargarTerreno()">Terrenos de venta</a><br><br>
+					<i class="fa-regular fa-thumbs-up">Siguenos</i>
+					<div id="facebook1"><a href="https://www.facebook.com/century21elite.ec/" target="none"
+							class="fa-brands fa-facebook"></a></div>
+					<div id="instagram1"><a href="https://www.instagram.com/century21eliteec/?hl=es-la" target="none"
+							class="fa-brands fa-instagram"></a></div>
+					<div id="twitter1"><a href="https://twitter.com/i/flow/login?redirect_after_login=%2Felitecentury21"
+							target="none" class="fa-brands fa-twitter"></a></div>
+					<div id="youtuve1"><a href="https://www.youtube.com/@century21eliteecuador44" target="none"
+							class="fa-brands fa-youtube"></a></div>
+				</div>
 			</div>
-			<div class="columnax3">
-				<i class="fa-solid fa-city">
-					<p></p>Inmobiliaria
-				</i>
-				<a href="#" onclick="cargarSomos()"><br><br>¿Quiénes somos?</a><br>
-				<a href="#" onclick="cargarContactos()">Contactos</a><br>
-			</div>
-			<div class="columnax3">
-				<i class="fa-solid fa-house">SweetHouse</i>
-				<a href="#" onclick="cargarCasas()"><br><br>Casas de venta</a><br>
-				<a href="#" onclick="cargarDepa()">Departamentos de venta</a><br>
-				<a href="#" onclick="cargarAlquiler()">Departamentos de alquiler</a><br>
-				<a href="#" onclick="cargarTerreno()">Terrenos de venta</a><br><br>
-				<i class="fa-regular fa-thumbs-up">Siguenos</i>
-				<div id="facebook1"><a href="https://www.facebook.com/century21elite.ec/" target="none"
-						class="fa-brands fa-facebook"></a></div>
-				<div id="instagram1"><a href="https://www.instagram.com/century21eliteec/?hl=es-la" target="none"
-						class="fa-brands fa-instagram"></a></div>
-				<div id="twitter1"><a href="https://twitter.com/i/flow/login?redirect_after_login=%2Felitecentury21"
-						target="none" class="fa-brands fa-twitter"></a></div>
-				<div id="youtuve1"><a href="https://www.youtube.com/@century21eliteecuador44" target="none"
-						class="fa-brands fa-youtube"></a></div>
+			<div class="derec">
+				<p>&copy;2023<b>SweetHouse</b> - Todos los Derechos Reservados</p>
 			</div>
 		</div>
-		<div class="derec">
-			<p>&copy;2023<b>SweetHouse</b> - Todos los Derechos Reservados</p>
-		</div>
-	</div>
 	<div class="botonArriba" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
 		<img src="img/arriba.png" width="45" height="45" alt="" />
 	</div>

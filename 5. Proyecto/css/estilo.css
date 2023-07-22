@@ -6,9 +6,28 @@
 .modal-content{
   background-color: rgba(188, 202, 228, 0.70);
   backdrop-filter: blur(10px);
-  border-radius: 50px;
   width: 80%;
 }
+
+.modal-header h4{
+  color: white;
+}
+
+.carousel-caption h3{
+  color: white;
+  text-align: center;
+}
+
+
+.item {
+  height: 400px;
+}
+
+.carousel-caption p{
+  color: white;
+}
+
+
 .close{
       font-size: 30px;
       color: rgba(108, 7, 41, 1.00);

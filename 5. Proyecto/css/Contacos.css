@@ -13,7 +13,7 @@
     grid-area: 2 / 2 / 5 / 4;
 }
 
-.div2 {
+.divForm {
     grid-area: 2 / 4 / 5 / 5;
 }
 
@@ -42,23 +42,12 @@
     align-items: center;
 }
 
-.map-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.6);
-    /* Fondo semi-transparente */
-}
 
-.div2 {
+.divForm {
     border-radius: 50px;
     padding-top: 10px;
-    ;
     flex: 1 0 300px;
     margin: 10px;
-    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,7 +85,7 @@ label {
         flex: 1;
     }
 
-    .div2 {
+    .divForm {
         flex: 1;
     }
 }
@@ -107,7 +96,7 @@ label {
     }
 
     .div1,
-    .div2 {
+    .divForm {
         flex: 1 0 100%;
     }
 
