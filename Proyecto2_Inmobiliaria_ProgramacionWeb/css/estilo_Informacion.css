@@ -1,0 +1,364 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.parent1 div {
+  font-size: 20px;
+}
+
+
+.div1 {
+  color: #6E2C00;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+.div2 {
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.div4 {
+
+  box-sizing: border-box;
+  padding-bottom: 20px;
+  overflow-x: auto;
+}
+
+td,
+th {
+  padding: 25px
+}
+
+.div5 {
+  color: #6E2C00;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.div6 {
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+/*Seccion de información de las casas*/
+.div7,
+.div8,
+.div9 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: rgba(188, 202, 228, 0.70);
+  backdrop-filter: blur(10px);
+  /*hacerlo borroso al background*/
+  border-radius: 50px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+/*Seccion de información de las casas*/
+.cont_info1 {
+  padding: 10px;
+  width: 70%;
+}
+
+/*formato de imagenes*/
+.house-image1 {
+  width: 250px;
+  height: 200px;
+  margin-right: 20px;
+  border-radius: 20px;
+  transition: transform 0.3s;
+}
+
+
+/*animación de zoom en imagenes de casas*/
+.house-image1:hover {
+  transform: scale(1.08);
+}
+
+.house-details1 {
+  flex-grow: 1;
+}
+
+
+
+
+
+/*formato de tablas precios*/
+.parent1 table td {
+  padding: 10px 10px 0px 30px;
+  border: none;
+}
+
+tr {
+  width: 100px;
+}
+
+.t_tabla {
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #722620;
+}
+
+
+/*formato de los espacios*/
+.tipos_caracteristicas1 {
+  border: 2px solid #990235;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.cosas_casa1,
+.ubicacion1,
+.precios1,
+.contactos_compra1 {
+  padding-left: 30px;
+}
+
+.text_espacios1,
+.text_ubicacion1,
+.text_precios1 {
+  text-align: left;
+  font-size: 12px;
+  font-weight: bold;
+  color: #990235;
+}
+
+
+/*imagen de contactos*/
+.img_ubicacion1 {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s;
+}
+
+.img_ubicacion1:hover {
+  transform: scale(1.5);
+}
+
+
+/*RESPONSIVE*/
+
+/*960px*/
+@media (max-width: 960px) {
+
+  .div7,
+  .div8,
+  .div9 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .house-image1 {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cont_imgCasa1{
+    width: 220px;
+  }
+
+  .house-details1{
+    width: 220px;
+  }
+  h3{
+    text-align: center;
+  }
+}
+
+
+/*700px*/
+@media (max-width: 700px) {
+  .div7,
+  .div8,
+  .div9 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .house-image1 {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cont_imgCasa1{
+    width: 220px;
+  }
+
+  .house-details1{
+    width: 220px;
+  }
+  h3{
+    text-align: center;
+  }
+}
+
+/*650*/
+@media (max-width: 650px) {
+  .div7,
+  .div8,
+  .div9 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .house-image1 {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cont_imgCasa1{
+    width: 220px;
+  }
+
+  .house-details1{
+    width: 220px;
+  }
+  h3{
+    text-align: center;
+  }
+}
+
+/*iphone*/
+@media (max-width: 560px) {
+  .div7,
+  .div8,
+  .div9 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .house-image1 {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cont_imgCasa1{
+    width: 220px;
+  }
+
+  .house-details1{
+    width: 220px;
+  }
+  h3{
+    text-align: center;
+  }
+}
+
+/*iphone*/
+@media (max-width: 420px) {
+  .div7,
+  .div8,
+  .div9 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .house-image1 {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cont_imgCasa1{
+    width: 220px;
+  }
+
+  .house-details1{
+    width: 220px;
+  }
+  h3{
+    text-align: center;
+  }
+}
+
+/*Galaxy Bold*/
+@media (max-width: 370px) {
+  .div7,
+  .div8,
+  .div9 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .house-image1 {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cont_imgCasa1{
+    width: 220px;
+  }
+
+  .house-details1{
+    width: 220px;
+  }
+  h3{
+    text-align: center;
+  }
+}
+
+/*280*/
+@media (max-width: 280px) {
+  .div7,
+  .div8,
+  .div9 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .house-image1 {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cont_imgCasa1{
+    width: 220px;
+  }
+
+  .house-details1{
+    width: 220px;
+  }
+  h3{
+    text-align: center;
+  }
+}
