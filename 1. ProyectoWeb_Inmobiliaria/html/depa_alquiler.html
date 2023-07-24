@@ -33,11 +33,10 @@
       font-weight: bold;
     }
 
-    .close{
+    .close {
       font-size: 30px;
       color: rgba(108, 7, 41, 1.00);
     }
-    
   </style>
 </head>
 
@@ -69,10 +68,11 @@
           <div class="modal-body">
             <div id="contenedor">
               <form ACTION="php/comprar.php" id="formulario" name="form2" METHOD="post" target="_blank">
-                <label for="nombre">Nombres:</label>
+                <label for="nombre">Nombres:</label><br>
                 <input type="text" id="nombre" name="nombre"
-                  pattern="^[a-zA-Z]+(\s[a-zA-Z]+)?(\s[a-zA-Z]+)?(\s[a-zA-Z]+)?$"
-                  placeholder="Escribe uno o dos nombres" required><br><br>
+                  pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+(\s[a-zA-ZáéíóúÁÉÍÓÚñÑ]+)?(\s[a-zA-ZáéíóúÁÉÍÓÚñÑ]+)?(\s[a-zA-ZáéíóúÁÉÍÓÚñÑ]+)?$"
+                  placeholder="Nombres y Apellidos" required><br><br>
+
 
                 <label for="telefono">Teléfono:</label>
                 <input type="text" id="telefono" name="telefono" pattern="[0-9]{10}" maxlength="10"
@@ -82,9 +82,8 @@
                 <input type="text" id="cedula" name="cedula" pattern="[0-9]{10}" maxlength="10" placeholder="0981515127"
                   required><br><br>
 
-                  <label for="email">Dirección de Email:</label>
-                  <input type="email" id="email" name="email" placeholder="steven@example.com"
-                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:\.[a-zA-Z]{2,})?
+                <label for="email">Dirección de Email:</label>
+                <input type="email" id="email" name="email" placeholder="steven@example.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:\.[a-zA-Z]{2,})?
                     " required><br><br>
 
                 <label for="mensaje">Mensaje</label>
@@ -115,17 +114,19 @@
           <div class="modal-body">
             <div id="contenedor2">
               <form method="POST" id="formulario2" action="php/contactos.php" target="_blank">
-                <label for="nombre">Nombres:</label>
-                <input type="text" id="nombre2" name="nombre"
-                  pattern="^[a-zA-Z]+(\s[a-zA-Z]+)?(\s[a-zA-Z]+)?(\s[a-zA-Z]+)?$"
-                  placeholder="Escribe uno o dos nombres" required><br><br>
+                <label for="nombre">Nombres:</label><br>
+                <input type="text" id="nombre" name="nombre"
+                  pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+(\s[a-zA-ZáéíóúÁÉÍÓÚñÑ]+)?(\s[a-zA-ZáéíóúÁÉÍÓÚñÑ]+)?(\s[a-zA-ZáéíóúÁÉÍÓÚñÑ]+)?$"
+                  placeholder="Nombres y Apellidos" required><br><br>
+
 
                 <label for="telefono">Teléfono:</label>
                 <input type="text" id="telefono2" name="telefono" pattern="[0-9]{10}" maxlength="10"
                   placeholder="0981515127" required><br><br>
 
                 <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje2" name="mensaje" placeholder="Escriba su mensaje" rows="4" required></textarea><br><br>
+                <textarea id="mensaje2" name="mensaje" placeholder="Escriba su mensaje" rows="4"
+                  required></textarea><br><br>
 
                 <center><input type="submit" value="Enviar">
                   <input type="reset" value="Resetear">
@@ -160,29 +161,27 @@
                 </ol>
 
                 <div class="carousel-inner" role="listbox">
-                  <div class="item active" >
-                    <img
-                      src="img/img_renta/Pichincha/casa1_3_Quito.jpg"
-                      alt="Ilustracion" class="carrusel_img" style="height: 270px;">
+                  <div class="item active">
+                    <img src="img/img_renta/Pichincha/casa1_3_Quito.jpg" alt="Ilustracion" class="carrusel_img"
+                      style="height: 270px;">
                     <div class="carousel-caption d-none d-md-block">
                       <h3>Balcón</h3>
                       <p>Espacios de Edificio Santa Lucia</p>
                     </div>
                   </div>
 
-                  <div class="item" >
-                    <img
-                      src="img/img_renta/Pichincha/casa1_1_Quito.jpg"
-                      alt="fotografia" class="carrusel_img" style="height: 270px;">
+                  <div class="item">
+                    <img src="img/img_renta/Pichincha/casa1_1_Quito.jpg" alt="fotografia" class="carrusel_img"
+                      style="height: 270px;">
                     <div class="carousel-caption d-none d-md-block">
                       <h3> Amplia zona</h3>
                       <p>Espacios de Edificio Santa Lucia</p>
                     </div>
                   </div>
 
-                  <div class="item" >
-                    <img src="img/img_renta/Pichincha/casa1_2_Quito.jpg"
-                      alt="pintura" class="carrusel_img" style="height: 270px;">
+                  <div class="item">
+                    <img src="img/img_renta/Pichincha/casa1_2_Quito.jpg" alt="pintura" class="carrusel_img"
+                      style="height: 270px;">
                     <div class="carousel-caption d-none d-md-block">
                       <h3>Sala</h3>
                       <p>Espacios de Edificio Santa Lucia</p>
@@ -212,7 +211,8 @@
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title" id="myModalLabel4">Santiago City - Urbanización Privada Guatitas del Saber - Casas Vis</h4>
+            <h4 class="modal-title" id="myModalLabel4">Santiago City - Urbanización Privada Guatitas del Saber - Casas
+              Vis</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
           <div class="modal-body">
@@ -229,29 +229,27 @@
                 </ol>
 
                 <div class="carousel-inner" role="listbox">
-                  <div class="item active" >
-                    <img
-                      src="img/img_renta/Guayas/casa1_1_Guayas.jpg"
-                      alt="Ilustracion" class="carrusel_img" style="height: 240px;">
+                  <div class="item active">
+                    <img src="img/img_renta/Guayas/casa1_1_Guayas.jpg" alt="Ilustracion" class="carrusel_img"
+                      style="height: 240px;">
                     <div class="carousel-caption d-none d-md-block">
                       <h3>Salero</h3>
                       <p>Santiago City - Urbanización Privada Guatitas del Saber - Casas Vis</p>
                     </div>
                   </div>
 
-                  <div class="item" >
-                    <img
-                      src="img/img_renta/Guayas/casa1_2_Guayas.jpg"
-                      alt="fotografia" class="carrusel_img" style="height: 240px;">
+                  <div class="item">
+                    <img src="img/img_renta/Guayas/casa1_2_Guayas.jpg" alt="fotografia" class="carrusel_img"
+                      style="height: 240px;">
                     <div class="carousel-caption d-none d-md-block">
                       <h3> Comedor</h3>
                       <p>Santiago City - Urbanización Privada Guatitas del Saber - Casas Vis</p>
                     </div>
                   </div>
 
-                  <div class="item" >
-                    <img src="img/img_renta/Guayas/casa1_3_Guayas.jpg"
-                      alt="pintura" class="carrusel_img" style="height: 240px;">
+                  <div class="item">
+                    <img src="img/img_renta/Guayas/casa1_3_Guayas.jpg" alt="pintura" class="carrusel_img"
+                      style="height: 240px;">
                     <div class="carousel-caption d-none d-md-block">
                       <h3>Sala</h3>
                       <p>Santiago City - Urbanización Privada Guatitas del Saber - Casas Vis</p>
@@ -296,29 +294,27 @@
                 </ol>
 
                 <div class="carousel-inner" role="listbox">
-                  <div class="item active" >
-                    <img
-                      src="img/img_renta/Guayas/casa2_1_Guayas.jpg"
-                      alt="Ilustracion" class="carrusel_img" style="height: 270px;">
+                  <div class="item active">
+                    <img src="img/img_renta/Guayas/casa2_1_Guayas.jpg" alt="Ilustracion" class="carrusel_img"
+                      style="height: 270px;">
                     <div class="carousel-caption d-none d-md-block">
                       <h3>Sala </h3>
                       <p>Condominio/Marcahua</p>
                     </div>
                   </div>
 
-                  <div class="item" >
-                    <img
-                      src="img/img_renta/Guayas/casa2_2_Guayas.jpg"
-                      alt="fotografia" class="carrusel_img" style="height: 270px;">
+                  <div class="item">
+                    <img src="img/img_renta/Guayas/casa2_2_Guayas.jpg" alt="fotografia" class="carrusel_img"
+                      style="height: 270px;">
                     <div class="carousel-caption d-none d-md-block">
                       <h3> Pasillos amplios</h3>
                       <p>Condominio/Marcahua</p>
                     </div>
                   </div>
 
-                  <div class="item" >
-                    <img src="img/img_renta/Guayas/casa2_3_Guayas.jpg"
-                      alt="pintura" class="carrusel_img" style="height: 270px;">
+                  <div class="item">
+                    <img src="img/img_renta/Guayas/casa2_3_Guayas.jpg" alt="pintura" class="carrusel_img"
+                      style="height: 270px;">
                     <div class="carousel-caption d-none d-md-block">
                       <h3>Seguridad</h3>
                       <p>Condominio/Marcahua</p>
@@ -365,38 +361,36 @@
                 </ol>
 
                 <div class="carousel-inner" role="listbox">
-                  <div class="item active" >
-                    <img
-                      src="img/img_renta/Imbabura/casa1_1_Imbabura.jpg"
-                      alt="Ilustracion" class="carrusel_img" style="height: 270px;">
+                  <div class="item active">
+                    <img src="img/img_renta/Imbabura/casa1_1_Imbabura.jpg" alt="Ilustracion" class="carrusel_img"
+                      style="height: 270px;">
                     <div class="carousel-caption d-none d-md-block">
                       <h3>Piscina </h3>
                       <p>Condominio/Nosesabe</p>
                     </div>
                   </div>
 
-                  <div class="item" >
-                    <img
-                      src="img/img_renta/Imbabura/casa1_2_Imbabura.jpg"
-                      alt="fotografia" class="carrusel_img" style="height: 270px;">
+                  <div class="item">
+                    <img src="img/img_renta/Imbabura/casa1_2_Imbabura.jpg" alt="fotografia" class="carrusel_img"
+                      style="height: 270px;">
                     <div class="carousel-caption d-none d-md-block">
                       <h3> Sala de estar</h3>
                       <p>Condominio/Nosesabe</p>
                     </div>
                   </div>
 
-                  <div class="item" >
-                    <img src="img/img_renta/Imbabura/casa1_3_Imbabura.jpg"
-                      alt="pintura" class="carrusel_img" style="height: 270px;">
+                  <div class="item">
+                    <img src="img/img_renta/Imbabura/casa1_3_Imbabura.jpg" alt="pintura" class="carrusel_img"
+                      style="height: 270px;">
                     <div class="carousel-caption d-none d-md-block">
                       <h3>Jardín</h3>
                       <p>Condominio/Nosesabe</p>
                     </div>
                   </div>
 
-                  <div class="item" >
-                    <img src="img/img_renta/Imbabura/casa1_4_Imbabura.jpg"
-                      alt="pintura" class="carrusel_img" style="height: 270px;">
+                  <div class="item">
+                    <img src="img/img_renta/Imbabura/casa1_4_Imbabura.jpg" alt="pintura" class="carrusel_img"
+                      style="height: 270px;">
                     <div class="carousel-caption d-none d-md-block">
                       <h3>Espacio amplio</h3>
                       <p>Condominio/Nosesabe</p>
@@ -426,7 +420,8 @@
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title" id="myModalLabel6">Altos del Pacifico Club y Residences - Urbanización Privada en Manta -
+            <h4 class="modal-title" id="myModalLabel6">Altos del Pacifico Club y Residences - Urbanización Privada en
+              Manta -
               Casas Vip</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
@@ -444,10 +439,9 @@
                 </ol>
 
                 <div class="carousel-inner" role="listbox">
-                  <div class="item active" >
-                    <img
-                      src="img/img_renta/Manabi/casa1_1_Manabi.jpg"
-                      alt="Ilustracion" class="carrusel_img" style="height: 240px;">
+                  <div class="item active">
+                    <img src="img/img_renta/Manabi/casa1_1_Manabi.jpg" alt="Ilustracion" class="carrusel_img"
+                      style="height: 240px;">
                     <div class="carousel-caption d-none d-md-block">
                       <h3>Psicina </h3>
                       <p>Altos del Pacifico Club y Residences - Urbanización Privada en Manta -
@@ -455,10 +449,9 @@
                     </div>
                   </div>
 
-                  <div class="item" >
-                    <img
-                      src="img/img_renta/Manabi/casa1_2_Manabi.jpg"
-                      alt="fotografia" class="carrusel_img" style="height: 240px;">
+                  <div class="item">
+                    <img src="img/img_renta/Manabi/casa1_2_Manabi.jpg" alt="fotografia" class="carrusel_img"
+                      style="height: 240px;">
                     <div class="carousel-caption d-none d-md-block">
                       <h3> Balcón</h3>
                       <p>Altos del Pacifico Club y Residences - Urbanización Privada en Manta -
@@ -466,9 +459,9 @@
                     </div>
                   </div>
 
-                  <div class="item" >
-                    <img src="img/img_renta/Manabi/casa1_3_Manabi.jpg"
-                      alt="pintura" class="carrusel_img" style="height: 240px;">
+                  <div class="item">
+                    <img src="img/img_renta/Manabi/casa1_3_Manabi.jpg" alt="pintura" class="carrusel_img"
+                      style="height: 240px;">
                     <div class="carousel-caption d-none d-md-block">
                       <h3>Comedor</h3>
                       <p>Altos del Pacifico Club y Residences - Urbanización Privada en Manta -
@@ -476,9 +469,9 @@
                     </div>
                   </div>
 
-                  <div class="item" >
-                    <img src="img/img_renta/Manabi/casa1_4_Manabi.jpg"
-                      alt="pintura" class="carrusel_img" style="height: 240px;">
+                  <div class="item">
+                    <img src="img/img_renta/Manabi/casa1_4_Manabi.jpg" alt="pintura" class="carrusel_img"
+                      style="height: 240px;">
                     <div class="carousel-caption d-none d-md-block">
                       <h3>Comedor </h3>
                       <p>Altos del Pacifico Club y Residences - Urbanización Privada en Manta -
@@ -503,87 +496,85 @@
     </div>
 
 
-        <!-- CARRUSEL SANTA ELENA-->
-        <div class="modal fade" id="myModal8" tabindex="-1" data-backdrop="static" data-keyboard="true"
-        aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title" id="myModalLabel6">Conjunto Residencial - Salinas saladas</h4>
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body">
-              <div class="container">
-                <br>
-                <div id="theCarousel6" class="carousel slide" data-ride="carousel">
-                  <!-- Indicadores -->
-                  <ol class="carousel-indicators">
-                    <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#theCarousel" data-slide-to="1"></li>
-                    <li data-target="#theCarousel" data-slide-to="2"></li>
-                    <li data-target="#theCarousel" data-slide-to="3"></li>
-  
-                  </ol>
-  
-                  <div class="carousel-inner" role="listbox">
-                    <div class="item active" >
-                      <img
-                        src="img/img_renta/SantaElena/casa1_1_SE.png"
-                        alt="Ilustracion" class="carrusel_img" style="height: 270px;">
-                      <div class="carousel-caption d-none d-md-block">
-                        <h3>Balcón </h3>
-                        <p>Conjunto Residencial - Salinas saladas</p>
-                      </div>
+    <!-- CARRUSEL SANTA ELENA-->
+    <div class="modal fade" id="myModal8" tabindex="-1" data-backdrop="static" data-keyboard="true"
+      aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel6">Conjunto Residencial - Salinas saladas</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <br>
+              <div id="theCarousel6" class="carousel slide" data-ride="carousel">
+                <!-- Indicadores -->
+                <ol class="carousel-indicators">
+                  <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#theCarousel" data-slide-to="1"></li>
+                  <li data-target="#theCarousel" data-slide-to="2"></li>
+                  <li data-target="#theCarousel" data-slide-to="3"></li>
+
+                </ol>
+
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <img src="img/img_renta/SantaElena/casa1_1_SE.png" alt="Ilustracion" class="carrusel_img"
+                      style="height: 270px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Balcón </h3>
+                      <p>Conjunto Residencial - Salinas saladas</p>
                     </div>
-  
-                    <div class="item" >
-                      <img
-                        src="img/img_renta/SantaElena/casa1_2_SE.jpg"
-                        alt="fotografia" class="carrusel_img" style="height: 270px;">
-                      <div class="carousel-caption d-none d-md-block">
-                        <h3> Cocina</h3>
-                        <p>Conjunto Residencial - Salinas saladas</p>
-                      </div>
-                    </div>
-  
-                    <div class="item" >
-                      <img src="img/img_renta/SantaElena/casa1_3_SE.jpg"
-                        alt="pintura" class="carrusel_img" style="height: 270px;">
-                      <div class="carousel-caption d-none d-md-block">
-                        <h3>Comedor</h3>
-                        <p>Conjunto Residencial - Salinas saladas</p>
-                      </div>
-                    </div>
-  
-                    <div class="item" >
-                      <img src="img/img_renta/SantaElena/casa1_4_SE.jpg"
-                        alt="pintura" class="carrusel_img" style="height: 270px;">
-                      <div class="carousel-caption d-none d-md-block">
-                        <h3>Cocina
-                        </h3>
-                        <p>Conjunto Residencial - Salinas saladas</p>
-                      </div>
-                    </div>
-  
-                    <a class="left carousel-control" href="#theCarousel6" role="button" data-slide="prev">
-                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                      <span class="sr-only">anterior</span>
-                    </a>
-                    <a class="right carousel-control" href="#theCarousel6" role="button" data-slide="next">
-                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                      <span class="sr-only">siguiente</span>
-                    </a>
                   </div>
+
+                  <div class="item">
+                    <img src="img/img_renta/SantaElena/casa1_2_SE.jpg" alt="fotografia" class="carrusel_img"
+                      style="height: 270px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3> Cocina</h3>
+                      <p>Conjunto Residencial - Salinas saladas</p>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <img src="img/img_renta/SantaElena/casa1_3_SE.jpg" alt="pintura" class="carrusel_img"
+                      style="height: 270px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Comedor</h3>
+                      <p>Conjunto Residencial - Salinas saladas</p>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <img src="img/img_renta/SantaElena/casa1_4_SE.jpg" alt="pintura" class="carrusel_img"
+                      style="height: 270px;">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Cocina
+                      </h3>
+                      <p>Conjunto Residencial - Salinas saladas</p>
+                    </div>
+                  </div>
+
+                  <a class="left carousel-control" href="#theCarousel6" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">anterior</span>
+                  </a>
+                  <a class="right carousel-control" href="#theCarousel6" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">siguiente</span>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
 
-      <!-- CARRUSEL SANTO DOMINGO-->
-      <div class="modal fade" id="myModal9" tabindex="-1" data-backdrop="static" data-keyboard="true"
+    <!-- CARRUSEL SANTO DOMINGO-->
+    <div class="modal fade" id="myModal9" tabindex="-1" data-backdrop="static" data-keyboard="true"
       aria-labelledby="myModalLabel">
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
@@ -605,38 +596,36 @@
                 </ol>
 
                 <div class="carousel-inner" role="listbox">
-                  <div class="item active" >
-                    <img
-                      src="img/img_renta/SantoDomingo/casa1_1_AD.jpg"
-                      alt="Ilustracion" class="carrusel_img" style="height: 270px;">
+                  <div class="item active">
+                    <img src="img/img_renta/SantoDomingo/casa1_1_AD.jpg" alt="Ilustracion" class="carrusel_img"
+                      style="height: 270px;">
                     <div class="carousel-caption d-none d-md-block">
                       <h3>Terraza</h3>
                       <p>Venta de Dos Casas en Plaza Asturias Sto. Domingo</p>
                     </div>
                   </div>
 
-                  <div class="item" >
-                    <img
-                      src="img/img_renta/SantoDomingo/casa1_2_AD.jpg"
-                      alt="fotografia" class="carrusel_img" style="height: 270px;">
+                  <div class="item">
+                    <img src="img/img_renta/SantoDomingo/casa1_2_AD.jpg" alt="fotografia" class="carrusel_img"
+                      style="height: 270px;">
                     <div class="carousel-caption d-none d-md-block">
                       <h3> Cocina</h3>
                       <p>Venta de Dos Casas en Plaza Asturias Sto. Domingo</p>
                     </div>
                   </div>
 
-                  <div class="item" >
-                    <img src="img/img_renta/SantoDomingo/casa1_3_AD.jpg"
-                      alt="pintura" class="carrusel_img" style="height: 270px;">
+                  <div class="item">
+                    <img src="img/img_renta/SantoDomingo/casa1_3_AD.jpg" alt="pintura" class="carrusel_img"
+                      style="height: 270px;">
                     <div class="carousel-caption d-none d-md-block">
                       <h3>Cocina</h3>
                       <p>Venta de Dos Casas en Plaza Asturias Sto. Domingo</p>
                     </div>
                   </div>
 
-                  <div class="item" >
-                    <img src="img/img_renta/SantoDomingo/casa1_4_AD.jpg"
-                      alt="pintura" class="carrusel_img" style="height: 270px;">
+                  <div class="item">
+                    <img src="img/img_renta/SantoDomingo/casa1_4_AD.jpg" alt="pintura" class="carrusel_img"
+                      style="height: 270px;">
                     <div class="carousel-caption d-none d-md-block">
                       <h3>Baño</h3>
                       <p>Venta de Dos Casas en Plaza Asturias Sto. Domingo</p>
@@ -699,7 +688,8 @@
                   class="img_ubicacion" src="img/img_comprar/ubicacion.png" alt="" /> </a></p>
           </div>
           <div class="contactos_compra">
-            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra" value="alquilar">
+            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra"
+              value="alquilar">
             <img class="img_contactosCompra" src="img/img_comprar/whatsapp.png" class="btn btn-primary"
               data-toggle="modal" data-target="#myModalContacto" alt="" />
           </div>
@@ -745,7 +735,8 @@
                   src="img/img_comprar/ubicacion.png" alt="" /> </a></p>
           </div>
           <div class="contactos_compra">
-            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra" value="alquilar">
+            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra"
+              value="alquilar">
             <img class="img_contactosCompra" src="img/img_comprar/whatsapp.png" class="btn btn-primary"
               data-toggle="modal" data-target="#myModalContacto" alt="" />
           </div>
@@ -785,7 +776,8 @@
                   class="img_ubicacion" src="img/img_comprar/ubicacion.png" alt="" /> </a></p>
           </div>
           <div class="contactos_compra">
-            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra" value="alquilar">
+            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra"
+              value="alquilar">
             <img class="img_contactosCompra" src="img/img_comprar/whatsapp.png" class="btn btn-primary"
               data-toggle="modal" data-target="#myModalContacto" alt="" />
           </div>
@@ -827,7 +819,8 @@
                 target="new"><img class="img_ubicacion" src="img/img_comprar/ubicacion.png" alt="" /> </a></p>
           </div>
           <div class="contactos_compra">
-            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra" value="alquilar">
+            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra"
+              value="alquilar">
             <img class="img_contactosCompra" src="img/img_comprar/whatsapp.png" class="btn btn-primary"
               data-toggle="modal" data-target="#myModalContacto" alt="" />
           </div>
@@ -871,7 +864,8 @@
                   src="img/img_comprar/ubicacion.png" alt="" /> </a></p>
           </div>
           <div class="contactos_compra">
-            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra" value="alquilar">
+            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra"
+              value="alquilar">
             <img class="img_contactosCompra" src="img/img_comprar/whatsapp.png" class="btn btn-primary"
               data-toggle="modal" data-target="#myModalContacto" alt="" />
           </div>
@@ -913,7 +907,8 @@
                   src="img/img_comprar/ubicacion.png" alt="" /> </a></p>
           </div>
           <div class="contactos_compra">
-            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra" value="alquilar">
+            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra"
+              value="alquilar">
             <img class="img_contactosCompra" src="img/img_comprar/whatsapp.png" class="btn btn-primary"
               data-toggle="modal" data-target="#myModalContacto" alt="" />
           </div>
@@ -956,7 +951,8 @@
                   src="img/img_comprar/ubicacion.png" alt="" /> </a></p>
           </div>
           <div class="contactos_compra">
-            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra" value="alquilar">
+            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompra"
+              value="alquilar">
             <img class="img_contactosCompra" src="img/img_comprar/whatsapp.png" class="btn btn-primary"
               data-toggle="modal" data-target="#myModalContacto" alt="" />
           </div>

@@ -8,9 +8,6 @@ body {
 	font-family: Arial, sans-serif;
 	width: 100%;
 	height: 25%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
 
 }
 
@@ -18,12 +15,13 @@ body {
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
-	border: 0px solid #000;
+	border: 2px solid rgba(108, 7, 41, 1.00);
 	border-radius: 50px;
 	padding: 5px;
 	width: 46px;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 	transform: perspective(500px);
+	background-color: wheat;
 }
 
 .botonArriba{
@@ -60,17 +58,6 @@ body {
 	width: 100%;
 
 }
-.menu__logo {
-	color: transparent;
-	font-weight: bold;
-	font-family: "Comic Sans MS", cursive;
-	text-shadow: 2px 2px 8px rgba(147, 196, 211, 0.5);
-  
-	/* Aplicar un degradado como fondo del texto */
-	background-image: linear-gradient(to right, #d900ff, #ff0025);
-	-webkit-background-clip: text; /* Propiedad específica para navegadores WebKit */
-	background-clip: text; /* Propiedad para navegadores que no sean WebKit */
-  }
   
 
 .menu {
@@ -325,7 +312,7 @@ p {
 .pie {
 	width: 100%;
 	height: 320px;
-	background-color: rgba(12, 0, 27, 0.908);
+	background-color: rgba(12, 0, 27, 1);
 
 }
 
@@ -377,7 +364,7 @@ a {
 }
 
 .derec {
-	background-color: rgba(12, 0, 27, 0.908);
+	background-color: rgba(12, 0, 27, 1);
 	width: 100%;
 	height: 20%;
 	box-sizing: border-box;

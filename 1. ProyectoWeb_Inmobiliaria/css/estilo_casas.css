@@ -229,6 +229,10 @@ input[type="button"] {
   h3{
     text-align: center;
   }
+
+  .carousel-caption p{
+    color: white;
+  }
 }
 
 
@@ -272,6 +276,10 @@ input[type="button"] {
   h3{
     text-align: center;
   }
+
+  .carousel-caption p{
+    color: white;
+  }
 }
 
 /*650*/
@@ -296,6 +304,10 @@ input[type="button"] {
   }
   h3{
     text-align: center;
+  }
+
+  .carousel-caption p{
+    color: white;
   }
 }
 
@@ -322,6 +334,10 @@ input[type="button"] {
   h3{
     text-align: center;
   }
+
+  .carousel-caption p{
+    color: white;
+  }
 }
 
 /*iphone*/
@@ -347,6 +363,10 @@ input[type="button"] {
   h3{
     text-align: center;
   }
+
+  .carousel-caption p{
+    color: white;
+  }
 }
 
 /*Galaxy Bold*/
@@ -369,6 +389,10 @@ input[type="button"] {
 
   .house-details{
     width: 320px;
+  }
+
+  .carousel-caption p{
+    color: white;
   }
 }
 
@@ -394,6 +418,10 @@ input[type="button"] {
   }
   h3{
     text-align: center;
+  }
+
+  .carousel-caption p{
+    color: white;
   }
 }
 
